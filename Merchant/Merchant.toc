@@ -1,0 +1,9 @@
+## Interface: 110005
+## Version: 1.0.0
+## Title: Merchant
+## Notes: Sell items to a merchant
+## Author: Erik Bryant (erikbryantology@gmail.com)
+## SavedVariables:
+
+Utility.lua
+Merchant.lua
