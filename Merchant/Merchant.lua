@@ -14,11 +14,9 @@ function SellAll()
         local name = C_Container.GetContainerItemLink(bag, slot)
         if name ~= nil then
             if foundMarker then
-                Utility.PrettyPrint("Selling: ", bag, slot, name)
                 C_Container.UseContainerItem(bag,slot)
             else
                 if string.find(name, "[Hearthstone]", 0, true) then
-                    Utility.PrettyPrint("Found marker: ", bag, slot, name)
                     foundMarker = true
                 end
             end
@@ -39,17 +37,15 @@ end
 local function OnEvent(self, event)
     if event == "MERCHANT_SHOW" then
         MerchantOpen = true
-        Utility.PrettyPrint("Enabling SellAll()")
     elseif event == "MERCHANT_CLOSED" then
         MerchantOpen = false
-        Utility.PrettyPrint("Disabling SellAll()")
    end
 end
 
-local DialogHijack = CreateFrame("Frame", "DialogHijack", UIParent)
-DialogHijack:Hide()
-DialogHijack:SetScript("OnEvent", OnEvent)
-DialogHijack:RegisterEvent("MERCHANT_SHOW")
-DialogHijack:RegisterEvent("MERCHANT_CLOSED")
+local Merchant = CreateFrame("Frame", "Merchant", UIParent)
+Merchant:Hide()
+Merchant:SetScript("OnEvent", OnEvent)
+Merchant:RegisterEvent("MERCHANT_SHOW")
+Merchant:RegisterEvent("MERCHANT_CLOSED")
 
 Utility.PrettyPrint("Loaded and ready to sell!")

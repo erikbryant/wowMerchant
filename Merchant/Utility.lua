@@ -15,7 +15,7 @@ end
 
 -- Print a message with the addon name (in color) as a prefix
 local function PrettyPrint(...)
-    local prefix = WrapTextInColorCode("DialogHijack: ", "cfCFF00C")
+    local prefix = WrapTextInColorCode("Merchant: ", "cfCFF00C")
     print(prefix, ...)
 end
 
