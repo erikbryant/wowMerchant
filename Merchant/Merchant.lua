@@ -17,7 +17,7 @@ local function nextSlot(bag, slot)
 end
 
 -- Find the first slot after the marker item (the hearthstone)
-local function findFirstSellable()
+local function findFirstAfterMarker()
     local bag = 0
     local slot = 1
     local found = true
@@ -41,9 +41,9 @@ function SellAll()
         return
     end
 
-    local bag, slot, found = findFirstSellable()
+    local bag, slot, found = findFirstAfterMarker()
     while found do
-        C_Container.UseContainerItem(bag,slot)
+        C_Container.UseContainerItem(bag, slot)
         bag, slot, found = nextSlot(bag, slot)
     end
 end
