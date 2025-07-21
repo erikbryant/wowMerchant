@@ -7,3 +7,8 @@
 
 Utility.lua
 Merchant.lua
+
+MagicButton\Source\MagicButton.lua
+MagicButton\Source\Binding.lua
+MagicButton\Source\Mixins\CommodityBuy.lua
+MagicButton\Source\Frames\CommodityBuy.xml
