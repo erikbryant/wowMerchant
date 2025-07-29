@@ -6,6 +6,7 @@
 ## SavedVariables:
 
 Utility.lua
+AutoMail.lua
 Merchant.lua
 
 MagicButton\Source\MagicButton.lua
