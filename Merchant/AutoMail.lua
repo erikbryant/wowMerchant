@@ -1,12 +1,8 @@
 -- Dispatch an incoming event
 local function OnEvent(self, event)
     if event == "MAIL_INBOX_UPDATE" then
-        if GetInboxNumItems() == 0 then
-            CloseMail()
-        else
-            AutoLootMailItem(1)
-        end
-   end
+        OpenAllMail:OnClick()
+    end
 end
 
 local AutoMail = CreateFrame("Frame", "AutoMail", UIParent)
