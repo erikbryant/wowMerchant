@@ -19,7 +19,43 @@ local function PrettyPrint(...)
     print(prefix, ...)
 end
 
+-- getMap returns the map the player is on
+function getMap()
+    return C_Map.GetBestMapForUnit("player")
+end
+
+-- InArea returns true if the player is currently in the given area
+function InArea(area)
+    local map = area[1]
+
+    if not map == getMap() then
+        return false
+    end
+
+    local x1 = area[2]
+    local y1 = area[3]
+    local x2 = area[4]
+    local y2 = area[5]
+
+    if x2 < x1 then
+        Utility.PrettyPrint("x1 and x2 are inverted: ", area)
+        return false
+    end
+
+    if y2 < y1 then
+        Utility.PrettyPrint("y1 and y2 are inverted: ", area)
+        return false
+    end
+
+    local pos = C_Map.GetPlayerMapPosition(map, "player")
+    local myX = pos.x*100
+    local myY = pos.y*100
+
+    return myX >= x1 and myX <= x2 and myY >= y1 and myY <= y2
+end
+
 Utility = {
     Dump = Dump,
+    InArea = InArea,
     PrettyPrint = PrettyPrint,
 }
