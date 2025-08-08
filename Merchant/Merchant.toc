@@ -1,5 +1,5 @@
 ## Interface: 110200
-## Version: 1.0.1
+## Version: 1.0.2
 ## Title: Merchant
 ## Notes: Convenience features for buying and selling items
 ## Author: Erik Bryant (erikbryantology@gmail.com)
@@ -8,6 +8,7 @@
 Utility.lua
 AutoMail.lua
 SellAll.lua
+Merchant.lua
 
 MagicButton\Source\MagicButton.lua
 MagicButton\Source\Binding.lua

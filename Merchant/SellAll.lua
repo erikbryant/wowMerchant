@@ -91,5 +91,3 @@ SellAllFrame:Hide()
 SellAllFrame:SetScript("OnEvent", OnEvent)
 SellAllFrame:RegisterEvent("MERCHANT_SHOW")
 SellAllFrame:RegisterEvent("MERCHANT_CLOSED")
-
-Utility.PrettyPrint("Loaded and ready to sell!")
