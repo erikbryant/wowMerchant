@@ -7,7 +7,7 @@
 
 Utility.lua
 AutoMail.lua
-Merchant.lua
+SellAll.lua
 
 MagicButton\Source\MagicButton.lua
 MagicButton\Source\Binding.lua
