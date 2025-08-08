@@ -55,7 +55,7 @@ end
 -- End the merchant session
 function endMerchant()
     CloseMerchant()
-    Dismount()
+    C_MountJournal.Dismiss()
 end
 
 -- Sell all bag items after the marker
