@@ -5,6 +5,10 @@ local function OnEvent(self, event)
     if event == "MAIL_INBOX_UPDATE" then
         if OpenedMail then
             -- If we already opened the mail, don't keep opening
+            local numItems, totalItems = GetInboxNumItems()
+            if numItems == 0 then
+                CloseMail()
+            end
             return
         end
         OpenedMail = true
