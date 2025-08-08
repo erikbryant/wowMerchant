@@ -40,7 +40,10 @@ end
 function sellOneBag(bag, slot)
     slots = C_Container.GetContainerNumSlots(bag)
     while slot <= slots do
-        C_Container.UseContainerItem(bag, slot)
+        local name = C_Container.GetContainerItemLink(bag, slot)
+        if name ~= nil then
+            C_Container.UseContainerItem(bag, slot)
+        end
         slot = slot + 1
     end
 end
@@ -72,8 +75,6 @@ function SellAll()
         bag = bag + 1
         slot = 1
     end
-
-    C_Timer.After(2, endMerchant)
 end
 
 -- Dispatch an incoming event
