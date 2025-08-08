@@ -24,11 +24,16 @@ function getMap()
     return C_Map.GetBestMapForUnit("player")
 end
 
+-- OnMap returns true if the player is on the given map
+function OnMap(area)
+    return area[1] == getMap()
+end
+
 -- InArea returns true if the player is currently in the given area
 function InArea(area)
     local map = area[1]
 
-    if not map == getMap() then
+    if not OnMap(area) then
         return false
     end
 
@@ -57,5 +62,6 @@ end
 Utility = {
     Dump = Dump,
     InArea = InArea,
+    OnMap = OnMap,
     PrettyPrint = PrettyPrint,
 }
