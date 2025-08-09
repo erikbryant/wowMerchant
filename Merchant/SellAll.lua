@@ -1,5 +1,6 @@
 local MerchantOpen = false
 local MaxBag = 4
+local ItemsToSell = 0
 
 -- Return the coordinates of the next slot (or false if at end of bags)
 local function nextSlot(bag, slot)
@@ -35,6 +36,20 @@ local function findFirstAfterMarker()
     return -1, -1, false
 end
 
+-- Increment global to-sell counter
+function INC()
+    ItemsToSell = ItemsToSell + 1
+end
+
+-- Decrement global to-sell counter
+function DEC()
+    ItemsToSell = ItemsToSell - 1
+    if ItemsToSell == 0 then
+        CloseMerchant()
+        C_MountJournal.Dismiss()
+    end
+end
+
 -- Return a function closure
 function sellFunc(bag, slot)
     return function() sell(bag, slot) end
@@ -42,10 +57,18 @@ end
 
 -- Repeat until item is sold
 function sell(bag, slot)
-    if MerchantOpen then
-        C_Container.UseContainerItem(bag, slot)
-        C_Timer.After(0.5, sellFunc(bag, slot))
+    local itemID = C_Container.GetContainerItemID(bag, slot)
+    if itemID == nil then
+        DEC()
+        return
     end
+
+    if not MerchantOpen then
+        return
+    end
+
+    C_Container.UseContainerItem(bag, slot)
+    C_Timer.After(0.4, sellFunc(bag, slot))
 end
 
 -- Try to sell given slot
@@ -61,9 +84,11 @@ function tryToSell(bag, slot)
         function()
             local itemInfo = { C_Item.GetItemInfo(itemID) }
             local sellPrice = itemInfo[11]
-            if sellPrice > 0 then
-                sell(bag, slot)
+            if sellPrice <= 0 then
+                return
             end
+            INC()
+            sell(bag, slot)
         end
     )
 end
@@ -86,6 +111,7 @@ end
 local function OnEvent(self, event)
     if event == "MERCHANT_SHOW" then
         MerchantOpen = true
+        ItemsToSell = 0
     elseif event == "MERCHANT_CLOSED" then
         MerchantOpen = false
    end
