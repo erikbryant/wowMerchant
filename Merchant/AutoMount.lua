@@ -14,7 +14,7 @@ function AutoMount()
     if InArea(SWDwarvenAHPlaza) and not IsMounted() then
         C_MountJournal.SummonByID(280) -- Traveler's Tundra Mammoth
     end
-    C_Timer.After(interval(SWDwarvenAHPlaza, 2.0), AutoMount)
+    C_Timer.After(interval(SWDwarvenAHPlaza, 2.5), AutoMount)
 end
 
 -- AutoDismount dismounts if the player is in the given area
@@ -22,7 +22,7 @@ function AutoDismount()
     if InArea(SWDwarvenAHStairs) then
         C_MountJournal.Dismiss()
     end
-    C_Timer.After(interval(SWDwarvenAHStairs, 1.4), AutoDismount)
+    C_Timer.After(interval(SWDwarvenAHStairs, 1.0), AutoDismount)
 end
 
 AutoMount()
