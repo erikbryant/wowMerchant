@@ -21,7 +21,6 @@ end
 local function findFirstAfterMarker()
     local bag = 0
     local slot = 1
-    local markerFound = false
     local isSlot = true
 
     while isSlot do
@@ -36,26 +35,37 @@ local function findFirstAfterMarker()
     return -1, -1, false
 end
 
--- Sell all items from starting slot to end of bag
-function sellOneBag(bag, slot)
-    slots = C_Container.GetContainerNumSlots(bag)
-    while slot <= slots do
-        local name = C_Container.GetContainerItemLink(bag, slot)
-        if name ~= nil then
-            C_Container.UseContainerItem(bag, slot)
-        end
-        slot = slot + 1
+-- Return a function closure
+function sellFunc(bag, slot)
+    return function() sell(bag, slot) end
+end
+
+-- Repeat until item is sold
+function sell(bag, slot)
+    if MerchantOpen then
+        C_Container.UseContainerItem(bag, slot)
+        C_Timer.After(0.5, sellFunc(bag, slot))
     end
 end
 
-function sellFunc(bag, slot)
-    return function() sellOneBag(bag, slot) end
-end
+-- Try to sell given slot
+function tryToSell(bag, slot)
+    local itemID = C_Container.GetContainerItemID(bag, slot)
+    if itemID == nil then
+        return
+    end
 
--- End the merchant session
-function endMerchant()
-    CloseMerchant()
-    C_MountJournal.Dismiss()
+    itemID = tonumber(itemID)
+    local item = Item:CreateFromItemID(itemID)
+    item:ContinueOnItemLoad(
+        function()
+            local itemInfo = { C_Item.GetItemInfo(itemID) }
+            local sellPrice = itemInfo[11]
+            if sellPrice > 0 then
+                sell(bag, slot)
+            end
+        end
+    )
 end
 
 -- Sell all bag items after the marker
@@ -65,15 +75,10 @@ function SellAll()
         return
     end
 
-    local bag, slot, found = findFirstAfterMarker()
-    if not found then
-        return
-    end
-
-    while bag <= MaxBag do
-        C_Timer.After(0.1, sellFunc(bag, slot))
-        bag = bag + 1
-        slot = 1
+    local bag, slot, isSlot = findFirstAfterMarker()
+    while isSlot do
+        tryToSell(bag, slot)
+        bag, slot, isSlot = nextSlot(bag, slot)
     end
 end
 
