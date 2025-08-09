@@ -25,5 +25,6 @@ function AutoDismount()
     C_Timer.After(interval(SWDwarvenAHStairs, 1.0), AutoDismount)
 end
 
+-- Start the area scans
 AutoMount()
 AutoDismount()
