@@ -11,7 +11,7 @@ function MagicButtonCommodityBuyFrameMixin:OnEvent(event, ...)
     if newAmount <= oldAmount then
       AuctionHouseFrame.BuyDialog.BuyNowButton:Click()
     else
-      MagicButton_Print(MAGIC_BUTTON_L_COMMODITY_PRICE_INCREASED)
+      MagicButton_Print("Price increased")
       AuctionHouseFrame.BuyDialog.CancelButton:Click()
     end
     FrameUtil.UnregisterFrameForEvents(self, BUY_EVENTS)
