@@ -22,7 +22,7 @@ function AutoDismount()
     if InArea(SWDwarvenAHStairs) then
         C_MountJournal.Dismiss()
     end
-    C_Timer.After(interval(SWDwarvenAHStairs, 1.0), AutoDismount)
+    C_Timer.After(interval(SWDwarvenAHStairs, 0.5), AutoDismount)
 end
 
 -- Start the area scans
