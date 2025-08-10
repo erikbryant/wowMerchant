@@ -43,12 +43,12 @@ function InArea(area)
     local y2 = area[5]
 
     if x2 < x1 then
-        Utility.PrettyPrint("x1 and x2 are inverted: ", area)
+        MerchUtil.PrettyPrint("x1 and x2 are inverted: ", area)
         return false
     end
 
     if y2 < y1 then
-        Utility.PrettyPrint("y1 and y2 are inverted: ", area)
+        MerchUtil.PrettyPrint("y1 and y2 are inverted: ", area)
         return false
     end
 
@@ -59,9 +59,19 @@ function InArea(area)
     return myX >= x1 and myX <= x2 and myY >= y1 and myY <= y2
 end
 
-Utility = {
+-- Version returns the addon version and whether it is in debug mode
+local function Version()
+    local debug = ""
+    if C_CVar.GetCVar("scriptErrors") == "1" then
+        debug = "(debug)"
+    end
+    return "v"..AhaGlobal.ADDON_VERSION.." "..debug
+end
+
+MerchUtil = {
     Dump = Dump,
     InArea = InArea,
     OnMap = OnMap,
     PrettyPrint = PrettyPrint,
+    Version = Version,
 }

@@ -1,11 +1,13 @@
 ## Interface: 110200
-## Version: 1.0.2
+## Version: 1.0.3
 ## Title: Merchant
 ## Notes: Convenience features for buying and selling items
 ## Author: Erik Bryant (erikbryantology@gmail.com)
 ## SavedVariables:
 
-Utility.lua
+Global.lua
+MerchUtil.lua
+Slash.lua
 AutoMail.lua
 AutoMount.lua
 SellAll.lua

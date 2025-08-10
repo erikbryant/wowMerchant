@@ -3,7 +3,7 @@ SWDwarvenAHPlaza = {84, 62.00, 30.96, 62.70, 32.00}
 
 -- interval returns the time to wait between location checks
 function interval(area, i)
-    if Utility.OnMap(area) then
+    if MerchUtil.OnMap(area) then
         return i
     end
     return 10.0

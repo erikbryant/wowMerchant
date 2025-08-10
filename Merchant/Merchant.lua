@@ -1,1 +1,1 @@
-Utility.PrettyPrint("Loaded and ready to sell!")
+MerchUtil.PrettyPrint("Loaded and ready to sell!")

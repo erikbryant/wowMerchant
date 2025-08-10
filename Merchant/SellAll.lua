@@ -32,7 +32,7 @@ local function findFirstAfterMarker()
         bag, slot, isSlot = nextSlot(bag, slot)
     end
 
-    Utility.PrettyPrint("Hearthstone not found")
+    MerchUtil.PrettyPrint("Hearthstone not found")
     return -1, -1, false
 end
 
@@ -96,7 +96,7 @@ end
 -- Sell all bag items after the marker
 function SellAll()
     if not MerchantOpen then
-        Utility.PrettyPrint("Go find a merchant!")
+        MerchUtil.PrettyPrint("Go find a merchant!")
         return
     end
 
