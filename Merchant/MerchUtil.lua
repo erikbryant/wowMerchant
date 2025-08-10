@@ -65,7 +65,7 @@ local function Version()
     if C_CVar.GetCVar("scriptErrors") == "1" then
         debug = "(debug)"
     end
-    return "v"..AhaGlobal.ADDON_VERSION.." "..debug
+    return "v"..MerchGlobal.ADDON_VERSION.." "..debug
 end
 
 MerchUtil = {
