@@ -3,6 +3,8 @@ SWDwarvenAHPlaza = {84, 62.00, 30.96, 62.70, 32.00}
 
 -- interval returns the time to wait between location checks
 function interval(area, i)
+    -- TODO: hook ZONE_CHANGED and ZONE_CHANGED_NEW_AREA events to turn timer on/off
+
     if MerchUtil.OnMap(area) then
         return i
     end
@@ -28,3 +30,4 @@ end
 -- Start the area scans
 AutoMount()
 AutoDismount()
+

@@ -1,26 +1,23 @@
-local OpenedMail = false
+local OpeningMail = false
 
 -- Dispatch an incoming event
 local function OnEvent(self, event)
     if event == "MAIL_INBOX_UPDATE" then
-        if OpenedMail then
+        if OpeningMail then
             -- If we already opened the mail, don't keep opening
             local numItems, totalItems = GetInboxNumItems()
             if numItems == 0 then
                 CloseMail()
+                OpeningMail = false
             end
             return
         end
-        OpenedMail = true
+        OpeningMail = true
         OpenAllMail:OnClick()
-    end
-    if event == "MAIL_CLOSED" then
-        OpenedMail = false
     end
 end
 
-local AutoMail = CreateFrame("Frame", "AutoMail", UIParent)
-AutoMail:Hide()
-AutoMail:SetScript("OnEvent", OnEvent)
-AutoMail:RegisterEvent("MAIL_INBOX_UPDATE")
-AutoMail:RegisterEvent("MAIL_CLOSED")
+local AutoMailFrame = CreateFrame("Frame", "AutoMail", UIParent)
+AutoMailFrame:Hide()
+AutoMailFrame:SetScript("OnEvent", OnEvent)
+AutoMailFrame:RegisterEvent("MAIL_INBOX_UPDATE")
