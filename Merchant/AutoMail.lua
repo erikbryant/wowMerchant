@@ -1,19 +1,20 @@
-local OpeningMail = false
+local function PressOpenAllButton()
+    if OpenAllMail.timeUntilNextRetrieval ~= nil then
+        -- Already pressed
+        return
+    end
+    OpenAllMail:OnClick()
+end
 
 -- Dispatch an incoming event
 local function OnEvent(self, event)
     if event == "MAIL_INBOX_UPDATE" then
-        if OpeningMail then
-            -- If we already opened the mail, don't keep opening
-            local numItems, totalItems = GetInboxNumItems()
-            if numItems == 0 then
-                CloseMail()
-                OpeningMail = false
-            end
+        local numItems, totalItems = GetInboxNumItems()
+        if numItems == 0 then
+            CloseMail()
             return
         end
-        OpeningMail = true
-        OpenAllMail:OnClick()
+        PressOpenAllButton()
     end
 end
 
