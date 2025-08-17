@@ -1,8 +1,9 @@
-SWDwarvenAHStairs = {84, 61.57, 31.06, 62.00, 31.89}
-SWDwarvenAHPlaza = {84, 62.00, 30.96, 62.70, 32.00}
+--World coords: UnitPosition("player")
+local SWDwarvenAHPlaza = {84, -8366.3, 632.1, -8349.5, 647.6}
+local SWDwarvenAHStairs = {84, -8365.8, 643.6, -8359.4, 654.9}
 
 -- interval returns the time to wait between location checks
-function interval(area, i)
+local function interval(area, i)
     -- TODO: hook ZONE_CHANGED and ZONE_CHANGED_NEW_AREA events to turn timer on/off
 
     if MerchUtil.OnMap(area) then
@@ -12,16 +13,16 @@ function interval(area, i)
 end
 
 -- AutoMount summons a mount if player is in the given area
-function AutoMount()
-    if InArea(SWDwarvenAHPlaza) and not IsMounted() then
+local function AutoMount()
+    if MerchUtil.InArea(SWDwarvenAHPlaza) and not IsMounted() then
         C_MountJournal.SummonByID(280) -- Traveler's Tundra Mammoth
     end
     C_Timer.After(interval(SWDwarvenAHPlaza, 2.5), AutoMount)
 end
 
 -- AutoDismount dismounts if the player is in the given area
-function AutoDismount()
-    if InArea(SWDwarvenAHStairs) then
+local function AutoDismount()
+    if MerchUtil.InArea(SWDwarvenAHStairs) then
         C_MountJournal.Dismiss()
     end
     C_Timer.After(interval(SWDwarvenAHStairs, 0.5), AutoDismount)
@@ -30,4 +31,3 @@ end
 -- Start the area scans
 AutoMount()
 AutoDismount()
-

@@ -19,20 +19,13 @@ local function PrettyPrint(...)
     print(prefix, ...)
 end
 
--- getMap returns the map the player is on
-function getMap()
-    return C_Map.GetBestMapForUnit("player")
-end
-
 -- OnMap returns true if the player is on the given map
-function OnMap(area)
-    return area[1] == getMap()
+local function OnMap(area)
+    return area[1] == C_Map.GetBestMapForUnit("player")
 end
 
 -- InArea returns true if the player is currently in the given area
-function InArea(area)
-    local map = area[1]
-
+local function InArea(area)
     if not OnMap(area) then
         return false
     end
@@ -52,11 +45,8 @@ function InArea(area)
         return false
     end
 
-    local pos = C_Map.GetPlayerMapPosition(map, "player")
-    local myX = pos.x*100
-    local myY = pos.y*100
-
-    return myX >= x1 and myX <= x2 and myY >= y1 and myY <= y2
+    local x, y, z, continent = UnitPosition("player")
+    return x >= x1 and x <= x2 and y >= y1 and y <= y2
 end
 
 -- Version returns the addon version and whether it is in debug mode
