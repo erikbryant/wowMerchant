@@ -4,10 +4,9 @@ local ItemsToSell = 0
 
 -- Return the coordinates of the next slot (or false if at end of bags)
 local function nextSlot(bag, slot)
-    slots = C_Container.GetContainerNumSlots(bag)
     slot = slot + 1
 
-    if slot > slots then
+    if slot > C_Container.GetContainerNumSlots(bag) then
         slot = 1
         bag = bag + 1
         if bag > MaxBag then
@@ -37,12 +36,12 @@ local function findFirstAfterMarker()
 end
 
 -- Increment global to-sell counter
-function INC()
+local function INC()
     ItemsToSell = ItemsToSell + 1
 end
 
 -- Decrement global to-sell counter
-function DEC()
+local function DEC()
     ItemsToSell = ItemsToSell - 1
     if ItemsToSell == 0 then
         CloseMerchant()
@@ -51,12 +50,12 @@ function DEC()
 end
 
 -- Return a function closure
-function sellFunc(bag, slot)
+local function sellFunc(bag, slot)
     return function() sell(bag, slot) end
 end
 
 -- Repeat until item is sold
-function sell(bag, slot)
+local function sell(bag, slot)
     local itemID = C_Container.GetContainerItemID(bag, slot)
     if itemID == nil then
         DEC()
@@ -72,7 +71,7 @@ function sell(bag, slot)
 end
 
 -- Try to sell given slot
-function tryToSell(bag, slot)
+local function tryToSell(bag, slot)
     local itemID = C_Container.GetContainerItemID(bag, slot)
     if itemID == nil then
         return
@@ -94,7 +93,7 @@ function tryToSell(bag, slot)
 end
 
 -- Sell all bag items after the marker
-function SellAll()
+local function SellAll()
     if not MerchantOpen then
         MerchUtil.PrettyPrint("Go find a merchant!")
         return
