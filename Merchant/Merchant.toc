@@ -12,6 +12,9 @@ AutoMail.lua
 AutoMount.lua
 SellAll.lua
 AHQuery.lua
+PriceCache.lua
+AhaPatches.lua
+AhaMain.lua
 Merchant.lua
 
 MagicButton\Source\MagicButton.lua

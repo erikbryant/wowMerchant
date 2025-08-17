@@ -1,9 +1,11 @@
 -- SlashUsage prints a usage message for the slash commands
 local function SlashUsage()
-    MerchUtil.PrettyPrint(MerchUtil.Version(), GetRealmName())
+    MerchUtil.PrettyPrint(MerchUtil.Version(), GetRealmName(), UnitPosition("player"))
     MerchUtil.PrettyPrint("Usage '"..MerchGlobal.SLASH_CMD.." [command]' where command is:")
     MerchUtil.PrettyPrint("  debug 0/1           - debugging")
     MerchUtil.PrettyPrint("  status                 - dump internal state")
+    MerchUtil.PrettyPrint("  scan                   - start an AH scan")
+    MerchUtil.PrettyPrint("  favorites delete   - delete session favorites")
 end
 
 -- SlashHandler processes the slash command the player typed
@@ -15,8 +17,12 @@ local function SlashHandler(msg, ...)
     elseif msg == "debug 0" or msg == "d0" then
         C_CVar.SetCVar("scriptErrors", 0)
         MerchUtil.PrettyPrint("Debugging disabled")
-    elseif msg == "status" or msg == "s" then
-        -- ???
+    elseif msg == "favorites delete" or msg == "fd" then
+        AhaMain.RemoveFavorites()
+    elseif msg == "status" then
+        AhaMain.Status()
+    elseif msg == "scan" then
+        AhaMain.Scan()
     else
         if msg ~= "" then
             MerchUtil.PrettyPrint("Unknown slash command:", msg)
