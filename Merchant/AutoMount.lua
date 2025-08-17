@@ -1,11 +1,10 @@
 --World coords: UnitPosition("player")
-local SWDwarvenAHPlaza = {84, -8365.5, 633.0, -8350.0, 645.0}
-local SWDwarvenAHStairs = {84, -8365.5, 645.5, -8350.0, 655.0}
+local SWDwarvenAHPlaza = {map=84, x1=-8365.5, y1=633.0, x2=-8350.0, y2=645.0}
+local SWDwarvenAHStairs = {map=84, x1=-8365.5, y1=645.5, x2=-8350.0, y2=655.0}
 
 -- AutoMount summons a mount if player is in the given area
 local function AutoMount()
     if not MerchUtil.OnMap(SWDwarvenAHPlaza) then
-        MerchUtil.PrettyPrint("Wrong map")
         return
     end
 

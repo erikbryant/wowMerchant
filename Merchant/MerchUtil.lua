@@ -20,33 +20,30 @@ local function PrettyPrint(...)
 end
 
 -- OnMap returns true if the player is on the given map
-local function OnMap(area)
-    return area[1] == C_Map.GetBestMapForUnit("player")
+local function OnMap(a)
+    return a.map == C_Map.GetBestMapForUnit("player")
 end
 
 -- InArea returns true if the player is currently in the given area
-local function InArea(area)
-    if not OnMap(area) then
+local function InArea(a)
+    if not OnMap(a) then
         return false
     end
 
-    local x1 = area[2]
-    local y1 = area[3]
-    local x2 = area[4]
-    local y2 = area[5]
-
-    if x2 < x1 then
-        MerchUtil.PrettyPrint("x1 and x2 are inverted: ", area)
+    if a.x2 < a.x1 then
+        MerchUtil.PrettyPrint("x1 and x2 are inverted: ")
+        MerchUtil.Dump(10, 10, a)
         return false
     end
 
-    if y2 < y1 then
-        MerchUtil.PrettyPrint("y1 and y2 are inverted: ", area)
+    if a.y2 < a.y1 then
+        MerchUtil.PrettyPrint("y1 and y2 are inverted: ")
+        MerchUtil.Dump(10, 10, a)
         return false
     end
 
     local x, y, z, continent = UnitPosition("player")
-    return x >= x1 and x <= x2 and y >= y1 and y <= y2
+    return x >= a.x1 and x <= a.x2 and y >= a.y1 and y <= a.y2
 end
 
 -- Version returns the addon version and whether it is in debug mode
