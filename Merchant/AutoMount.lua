@@ -1,33 +1,44 @@
 --World coords: UnitPosition("player")
-local SWDwarvenAHPlaza = {84, -8366.3, 632.1, -8349.5, 647.6}
-local SWDwarvenAHStairs = {84, -8365.8, 643.6, -8359.4, 654.9}
-
--- interval returns the time to wait between location checks
-local function interval(area, i)
-    -- TODO: hook ZONE_CHANGED and ZONE_CHANGED_NEW_AREA events to turn timer on/off
-
-    if MerchUtil.OnMap(area) then
-        return i
-    end
-    return 10.0
-end
+local SWDwarvenAHPlaza = {84, -8365.5, 633.0, -8350.0, 645.0}
+local SWDwarvenAHStairs = {84, -8365.5, 645.5, -8350.0, 655.0}
 
 -- AutoMount summons a mount if player is in the given area
 local function AutoMount()
+    if not MerchUtil.OnMap(SWDwarvenAHPlaza) then
+        MerchUtil.PrettyPrint("Wrong map")
+        return
+    end
+
     if MerchUtil.InArea(SWDwarvenAHPlaza) and not IsMounted() then
         C_MountJournal.SummonByID(280) -- Traveler's Tundra Mammoth
     end
-    C_Timer.After(interval(SWDwarvenAHPlaza, 2.5), AutoMount)
+
+    C_Timer.After(2.5, AutoMount)
 end
 
 -- AutoDismount dismounts if the player is in the given area
 local function AutoDismount()
+    if not MerchUtil.OnMap(SWDwarvenAHStairs) then
+        return
+    end
+
     if MerchUtil.InArea(SWDwarvenAHStairs) then
         C_MountJournal.Dismiss()
     end
-    C_Timer.After(interval(SWDwarvenAHStairs, 0.5), AutoDismount)
+
+    C_Timer.After(0.5, AutoDismount)
 end
 
--- Start the area scans
-AutoMount()
-AutoDismount()
+-- Dispatch an incoming event
+local function OnEvent(self, event)
+    if event == "PLAYER_ENTERING_WORLD" or event == "ZONE_CHANGED_NEW_AREA" then
+        AutoMount()
+        AutoDismount()
+    end
+end
+
+local AutoMountFrame = CreateFrame("Frame", "AutoMount", UIParent)
+AutoMountFrame:Hide()
+AutoMountFrame:SetScript("OnEvent", OnEvent)
+AutoMountFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
+AutoMountFrame:RegisterEvent("ZONE_CHANGED_NEW_AREA")
