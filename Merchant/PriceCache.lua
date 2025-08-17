@@ -10865,7 +10865,7 @@ local function validatePriceCache()
 end
 
 -- Validate the sell price cache
---C_Timer.After(1, validatePriceCache)
+C_Timer.After(1, validatePriceCache)
 
 AhaPriceCache = {
   VendorSellPrice = VendorSellPrice,

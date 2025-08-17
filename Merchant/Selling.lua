@@ -51,11 +51,11 @@ end
 
 -- Return a function closure
 local function sellFunc(bag, slot)
-    return function() sell(bag, slot) end
+    return function() Selling.SellOne(bag, slot) end
 end
 
 -- Repeat until item is sold
-local function sell(bag, slot)
+local function SellOne(bag, slot)
     local itemID = C_Container.GetContainerItemID(bag, slot)
     if itemID == nil then
         DEC()
@@ -87,7 +87,7 @@ local function tryToSell(bag, slot)
                 return
             end
             INC()
-            sell(bag, slot)
+            SellOne(bag, slot)
         end
     )
 end
@@ -116,8 +116,13 @@ local function OnEvent(self, event)
    end
 end
 
-local SellAllFrame = CreateFrame("Frame", "SellAll", UIParent)
-SellAllFrame:Hide()
-SellAllFrame:SetScript("OnEvent", OnEvent)
-SellAllFrame:RegisterEvent("MERCHANT_SHOW")
-SellAllFrame:RegisterEvent("MERCHANT_CLOSED")
+local SellingFrame = CreateFrame("Frame", "Selling", UIParent)
+SellingFrame:Hide()
+SellingFrame:SetScript("OnEvent", OnEvent)
+SellingFrame:RegisterEvent("MERCHANT_SHOW")
+SellingFrame:RegisterEvent("MERCHANT_CLOSED")
+
+Selling = {
+    SellAll = SellAll,
+    SellOne = SellOne,
+}

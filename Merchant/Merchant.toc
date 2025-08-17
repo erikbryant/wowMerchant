@@ -10,7 +10,7 @@ MerchUtil.lua
 Slash.lua
 AutoMail.lua
 AutoMount.lua
-SellAll.lua
+Selling.lua
 AHQuery.lua
 PriceCache.lua
 AhaPatches.lua
