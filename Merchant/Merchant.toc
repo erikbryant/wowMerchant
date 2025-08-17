@@ -11,6 +11,7 @@ Slash.lua
 AutoMail.lua
 AutoMount.lua
 SellAll.lua
+AHQuery.lua
 Merchant.lua
 
 MagicButton\Source\MagicButton.lua
