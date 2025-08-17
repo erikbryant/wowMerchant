@@ -85,7 +85,6 @@ local function ScanOpen()
     MerchUtil.PrettyPrint("Starting scan...")
     C_AuctionHouse.ReplicateItems()
     Timers[#Timers+1] = C_Timer.NewTicker(5, CheckForAuctionResults)
-    Timers[#Timers+1] = C_Timer.NewTicker(1, AhaPatches.Unfavorite)
     if C_AuctionHouse.HasFavorites() then
         MerchUtil.PrettyPrint("*** Delete your AH favorites! ***")
     end
@@ -102,6 +101,7 @@ local function OnEvent(self, event)
         AhaMain.Scan = ScanOpen
         CancelTimers()
         Timers[#Timers+1] = C_Timer.NewTicker(1, AhaPatches.SetMinBuy)
+        Timers[#Timers+1] = C_Timer.NewTicker(1, AhaPatches.Unfavorite)
     elseif event == "AUCTION_HOUSE_CLOSED" then
         AhaMain.Scan = ScanClosed
         CancelTimers()
