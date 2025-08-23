@@ -6,6 +6,7 @@ local function SlashUsage()
     MerchUtil.PrettyPrint("  status                 - dump internal state")
     MerchUtil.PrettyPrint("  scan                   - start an AH scan")
     MerchUtil.PrettyPrint("  favorites delete   - delete session favorites")
+    MerchUtil.PrettyPrint("  validate              - validate the price cache")
 end
 
 -- SlashHandler processes the slash command the player typed
@@ -21,8 +22,11 @@ local function SlashHandler(msg, ...)
         AhaMain.RemoveFavorites()
     elseif msg == "status" then
         AhaMain.Status()
+        AHQuery.Status()
     elseif msg == "scan" then
         AhaMain.Scan()
+    elseif msg == "validate" then
+        PriceCache.ValidatePriceCache()
     else
         if msg ~= "" then
             MerchUtil.PrettyPrint("Unknown slash command:", msg)
