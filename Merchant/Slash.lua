@@ -26,7 +26,7 @@ local function SlashHandler(msg, ...)
     elseif msg == "scan" then
         AhaMain.Scan()
     elseif msg == "validate" then
-        PriceCache.ValidatePriceCache()
+        AhaPriceCache.ValidatePriceCache()
     else
         if msg ~= "" then
             MerchUtil.PrettyPrint("Unknown slash command:", msg)
