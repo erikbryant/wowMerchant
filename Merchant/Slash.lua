@@ -5,7 +5,7 @@ local function SlashUsage()
     MerchUtil.PrettyPrint("  debug 0/1           - debugging")
     MerchUtil.PrettyPrint("  status                 - dump internal state")
     MerchUtil.PrettyPrint("  scan                   - start an AH commodities scan")
-    MerchUtil.PrettyPrint("  bargains              - start an AH bargains scan")
+    MerchUtil.PrettyPrint("  arbitrage              - start an AH arbitrage scan")
     MerchUtil.PrettyPrint("  favorites delete   - delete session favorites")
     MerchUtil.PrettyPrint("  validate              - validate the price cache")
 end
@@ -26,8 +26,8 @@ local function SlashHandler(msg, ...)
         AHQuery.Status()
     elseif msg == "scan" then
         AhaMain.Scan()
-    elseif msg == "bargains" then
-        AHQuery.Bargains()
+    elseif msg == "arbitrage" then
+        AHQuery.Arbitrage()
     elseif msg == "validate" then
         AhaPriceCache.ValidatePriceCache()
     else
