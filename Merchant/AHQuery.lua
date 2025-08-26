@@ -7,8 +7,10 @@ local FavoritesCreated = {}
 --   go run listItems/listItems.go -passPhrase unlock | egrep "$line$"
 -- done < x > y
 -- sort -n y | cut -c 1-8,76-900 | awk '{ print $1 ", -- " $2 " " $3 " " $4 " " $5 " " $6 " " $7 " " $8 " " $9 }'
+-- rm x y
 local ItemIDsIndex = 1
 local ItemIDs = {
+    18257, -- Recipe: Major Rejuvenation Potion
     30323, -- Plans: Boots of the Protector
     191578, -- Recipe: Transmute: Awakened Fire
     223051, -- Plans: Artisan Skinning Knife
@@ -21,6 +23,7 @@ local ItemIDs = {
     223098, -- Pattern: Waders of the Unifying Flame
     223101, -- Pattern: Reinforced Setae Flyers
     223102, -- Pattern: Busy Bee's Buckle
+    224424, -- Pattern: Artisan Chef's Hat
 }
 
 local function Send(itemID)
