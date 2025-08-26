@@ -10,7 +10,7 @@ local function FindArbitrages(firstAuction, numAuctions)
     -- search for the function in the global namespace once,
     -- instead of on every call.
     local getReplicateItemInfo = C_AuctionHouse.GetReplicateItemInfo
-    local vendorSellPrice = AhaPriceCache.VendorSellPrice
+    local vendorSellPrice = PriceCache.VendorSellPrice
     local foundArbitrage = false
 
     for i = firstAuction, numAuctions-1 do
@@ -90,24 +90,24 @@ end
 -- Dispatch an incoming event
 local function OnEvent(self, event)
     if event == "AUCTION_HOUSE_SHOW" then
-        AhaMain.Scan = ScanOpen
+        AHArbitrage.Scan = ScanOpen
         CancelTimers()
-        Timers[#Timers+1] = C_Timer.NewTicker(1, AhaPatches.SetMinBuy)
-        Timers[#Timers+1] = C_Timer.NewTicker(1, AhaPatches.Unfavorite)
+        Timers[#Timers+1] = C_Timer.NewTicker(1, AHPatches.SetMinBuy)
+        Timers[#Timers+1] = C_Timer.NewTicker(1, AHPatches.Unfavorite)
     elseif event == "AUCTION_HOUSE_CLOSED" then
-        AhaMain.Scan = ScanClosed
+        AHArbitrage.Scan = ScanClosed
         CancelTimers()
         MerchUtil.RemoveFavorites(FavoritesCreated)
    end
 end
 
-local ArbitrageFrame = CreateFrame("Frame", "Arbitrage", UIParent)
-ArbitrageFrame:Hide()
-ArbitrageFrame:SetScript("OnEvent", OnEvent)
-ArbitrageFrame:RegisterEvent("AUCTION_HOUSE_SHOW")
-ArbitrageFrame:RegisterEvent("AUCTION_HOUSE_CLOSED")
+local AHArbitrageFrame = CreateFrame("Frame", "Arbitrage", UIParent)
+AHArbitrageFrame:Hide()
+AHArbitrageFrame:SetScript("OnEvent", OnEvent)
+AHArbitrageFrame:RegisterEvent("AUCTION_HOUSE_SHOW")
+AHArbitrageFrame:RegisterEvent("AUCTION_HOUSE_CLOSED")
 
-AhaMain = {
+AHArbitrage = {
     Scan = ScanClosed,
     Status = Status,
 }

@@ -21,7 +21,7 @@ local function Unfavorite()
     end
 end
 
-AhaPatches = {
+AHPatches = {
     SetMinBuy = SetMinBuy,
     Unfavorite = Unfavorite,
 }

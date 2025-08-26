@@ -105,7 +105,7 @@ local function OnEvent(self, event, item)
         itemID = item
     end
 
-    if price > 0 and price < AhaPriceCache.VendorSellPrice(itemID) then
+    if price > 0 and price < PriceCache.VendorSellPrice(itemID) then
         local itemKey = {
             itemID = itemID,
             itemLevel = itemLevel,

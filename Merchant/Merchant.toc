@@ -5,16 +5,16 @@
 ## Author: Erik Bryant (erikbryantology@gmail.com)
 ## SavedVariables:
 
-Global.lua
+MerchGlobal.lua
 MerchUtil.lua
-Slash.lua
+SlashHandler.lua
 AutoMail.lua
 AutoMount.lua
 Selling.lua
 AHQuery.lua
 PriceCache.lua
 AHPatches.lua
-Arbitrage.lua
+AHArbitrage.lua
 Merchant.lua
 
 MagicButton\Source\MagicButton.lua

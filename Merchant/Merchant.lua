@@ -1,1 +1,1 @@
-MerchUtil.PrettyPrint("Loaded and ready to sell!", "For help, type: ", MerchGlobal.SLASH_CMD)
+MerchUtil.PrettyPrint("Loaded and ready to sell!  For help: "..MerchGlobal.SLASH_CMD)

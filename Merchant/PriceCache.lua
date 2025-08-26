@@ -10868,7 +10868,7 @@ local function ValidatePriceCache()
     end
 end
 
-AhaPriceCache = {
+PriceCache = {
   ValidatePriceCache = ValidatePriceCache,
   VendorSellPrice = VendorSellPrice,
 }

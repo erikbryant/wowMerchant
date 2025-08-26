@@ -19,14 +19,14 @@ local function SlashHandler(msg, ...)
         C_CVar.SetCVar("scriptErrors", 0)
         MerchUtil.PrettyPrint("Debugging disabled")
     elseif msg == "status" then
-        AhaMain.Status()
+        AHArbitrage.Status()
         AHQuery.Status()
     elseif msg == "scan" then
-        AhaMain.Scan()
+        AHArbitrage.Scan()
     elseif msg == "arbitrage" then
         AHQuery.Arbitrage()
     elseif msg == "validate" then
-        AhaPriceCache.ValidatePriceCache()
+        PriceCache.ValidatePriceCache()
     else
         if msg ~= "" then
             MerchUtil.PrettyPrint("Unknown slash command:", msg)
