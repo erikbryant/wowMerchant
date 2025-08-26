@@ -1,11 +1,13 @@
 -- SlashUsage prints a usage message for the slash commands
 local function SlashUsage()
-    MerchUtil.PrettyPrint(MerchUtil.Version(), GetRealmName(), UnitPosition("player"))
+    local x, y, _, _ = UnitPosition("player")
+    local pos = string.format("(%.2f, %.2f)", x, y)
+    MerchUtil.PrettyPrint(MerchUtil.Version(), "  ", UnitName("player").."-"..GetRealmName(), "  ", pos)
     MerchUtil.PrettyPrint("Usage '"..MerchGlobal.SLASH_CMD.." [command]' where command is:")
     MerchUtil.PrettyPrint("  debug 0/1           - debugging")
     MerchUtil.PrettyPrint("  status                 - dump internal state")
     MerchUtil.PrettyPrint("  scan                   - start an AH commodities scan")
-    MerchUtil.PrettyPrint("  arbitrage              - start an AH arbitrage scan")
+    MerchUtil.PrettyPrint("  arbitrage             - start an AH arbitrage scan")
     MerchUtil.PrettyPrint("  validate              - validate the price cache")
 end
 
