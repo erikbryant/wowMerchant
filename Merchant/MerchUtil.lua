@@ -55,10 +55,19 @@ local function Version()
     return "v"..MerchGlobal.ADDON_VERSION.." "..debug
 end
 
+-- RemoveFavorites removes all of the favorites that were created this login session
+local function RemoveFavorites(faves)
+    for _, itemKey in pairs(faves) do
+        C_AuctionHouse.SetFavoriteItem(itemKey, false)
+    end
+    faves = {}
+end
+
 MerchUtil = {
     Dump = Dump,
     InArea = InArea,
     OnMap = OnMap,
     PrettyPrint = PrettyPrint,
+    RemoveFavorites = RemoveFavorites,
     Version = Version,
 }

@@ -57,14 +57,6 @@ local function CheckForAuctionResults()
     NumAuctionsFoundLastCheck = numAuctions
 end
 
--- RemoveFavorites removes all of the favorites that were created this login session
-local function RemoveFavorites()
-    for _, itemKey in pairs(FavoritesCreated) do
-        C_AuctionHouse.SetFavoriteItem(itemKey, false)
-    end
-    FavoritesCreated = {}
-end
-
 -- Status displays debug information
 local function Status()
     MerchUtil.PrettyPrint("NumAuctionsFoundLastCheck:", NumAuctionsFoundLastCheck)
@@ -105,6 +97,7 @@ local function OnEvent(self, event)
     elseif event == "AUCTION_HOUSE_CLOSED" then
         AhaMain.Scan = ScanClosed
         CancelTimers()
+        MerchUtil.RemoveFavorites(FavoritesCreated)
    end
 end
 
@@ -115,7 +108,6 @@ ArbitrageFrame:RegisterEvent("AUCTION_HOUSE_SHOW")
 ArbitrageFrame:RegisterEvent("AUCTION_HOUSE_CLOSED")
 
 AhaMain = {
-    RemoveFavorites = RemoveFavorites,
     Scan = ScanClosed,
     Status = Status,
 }
