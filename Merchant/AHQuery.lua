@@ -1,5 +1,6 @@
 local AHOpen = false
 local FirstTime = true
+local FavoritesCreated = {}
 
 -- sort generated/arbitrageItems.log | sed "s/ *[0-9.]*$//1" | uniq > x
 -- while IFS= read -r line; do
@@ -73,6 +74,7 @@ local function OnEvent(self, event, item)
         return
     elseif event == "AUCTION_HOUSE_CLOSED" then
         AHOpen = false
+        MerchUtil.RemoveFavorites(FavoritesCreated)
         return
     end
 
@@ -111,6 +113,7 @@ local function OnEvent(self, event, item)
             battlePetSpeciesID = 0,
         }
         C_AuctionHouse.SetFavoriteItem(itemKey, true)
+        table.insert(FavoritesCreated, itemKey)
     end
 end
 
