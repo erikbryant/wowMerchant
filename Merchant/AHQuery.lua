@@ -1,4 +1,5 @@
 local AHOpen = false
+local FirstTime = true
 
 -- sort generated/arbitrageItems.log | sed "s/ *[0-9.]*$//1" | uniq > x
 -- while IFS= read -r line; do
@@ -7,8 +8,11 @@ local AHOpen = false
 -- sort -n y | cut -c 1-8,76-900 | awk '{ print $1 ", -- " $2 " " $3 " " $4 " " $5 " " $6 " " $7 " " $8 " " $9 }'
 local ItemIDsIndex = 1
 local ItemIDs = {
+    30323, -- Plans: Boots of the Protector
+    191578, -- Recipe: Transmute: Awakened Fire
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
+    223061, -- Technique: Inscribed Rolling Pin
     223085, -- Design: Fractured Gemstone Locket
     223086, -- Design: Insightful Blasphemite
     223087, -- Design: Culminating Blasphemite
@@ -39,7 +43,7 @@ local function ArbitrageHelper()
     end
 
     itemID = ItemIDs[ItemIDsIndex]
-    MerchUtil.PrettyPrint("  scan: ", itemID, " (", ItemIDsIndex, "/", #ItemIDs, ")")
+    MerchUtil.PrettyPrint("  scan:", itemID, "("..ItemIDsIndex.."/"..#ItemIDs..")")
     Send(itemID)
 
     C_Timer.After(0.2, ArbitrageHelper)
@@ -62,6 +66,10 @@ end
 local function OnEvent(self, event, item)
     if event == "AUCTION_HOUSE_SHOW" then
         AHOpen = true
+        if FirstTime then
+            FirstTime = false
+            Arbitrage()
+        end
         return
     elseif event == "AUCTION_HOUSE_CLOSED" then
         AHOpen = false
