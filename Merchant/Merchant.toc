@@ -13,8 +13,8 @@ AutoMount.lua
 Selling.lua
 AHQuery.lua
 PriceCache.lua
-AhaPatches.lua
-AhaMain.lua
+AHPatches.lua
+Arbitrage.lua
 Merchant.lua
 
 MagicButton\Source\MagicButton.lua
