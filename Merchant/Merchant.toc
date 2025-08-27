@@ -12,6 +12,7 @@ AutoMail.lua
 AutoMount.lua
 Selling.lua
 AHQuery.lua
+BargainCache.lua
 PriceCache.lua
 AHPatches.lua
 AHArbitrage.lua
