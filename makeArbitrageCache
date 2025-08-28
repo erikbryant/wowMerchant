@@ -1,6 +1,10 @@
+# Limit how many we scan for
 MAX=21
+# Prefer newer entries
+LATEST=250
+
 echo "local ItemIDs = {"
-sort ~/dev/wow/generated/arbitrage.log | uniq -c | sort -nr | head -${MAX} | sed "s/^.*    /    /1"
+tail -${LATEST} ~/dev/wow/generated/arbitrage.log | sort | uniq -c | sort -nr | head -${MAX} | sed "s/^.*    /    /1"
 echo "}"
 echo
 echo "ArbitrageCache = {"
