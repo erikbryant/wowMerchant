@@ -87,6 +87,10 @@ local function OnEvent(self, event, item)
         itemID = item
     end
 
+    if price == nil then
+        return
+    end
+
     if price > 0 and price < PriceCache.VendorSellPrice(itemID) then
         local itemKey = {
             itemID = itemID,
