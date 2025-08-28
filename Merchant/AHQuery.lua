@@ -17,14 +17,14 @@ local function ArbitrageHelper()
         return
     end
 
-    if ItemIDsIndex > #BargainCache.ItemIDs then
+    if ItemIDsIndex > #ArbitrageCache.ItemIDs then
         MerchUtil.PrettyPrint("...done scanning for arbitrages")
         ItemIDsIndex = 1
         return
     end
 
-    itemID = BargainCache.ItemIDs[ItemIDsIndex]
-    MerchUtil.PrettyPrint("  scan:", itemID, "("..ItemIDsIndex.."/"..#BargainCache.ItemIDs..")")
+    itemID = ArbitrageCache.ItemIDs[ItemIDsIndex]
+    MerchUtil.PrettyPrint("  scan:", itemID, "("..ItemIDsIndex.."/"..#ArbitrageCache.ItemIDs..")")
     Send(itemID)
 
     C_Timer.After(0.2, ArbitrageHelper)
@@ -63,7 +63,7 @@ local function OnEvent(self, event, item)
     local itemLevel = 0
 
     if event == "ITEM_SEARCH_RESULTS_UPDATED" then
-        if item.itemID == BargainCache.ItemIDs[ItemIDsIndex] then
+        if item.itemID == ArbitrageCache.ItemIDs[ItemIDsIndex] then
             ItemIDsIndex = ItemIDsIndex + 1
         end
         local result = C_AuctionHouse.GetItemSearchResultInfo(item, 1)
@@ -74,7 +74,7 @@ local function OnEvent(self, event, item)
         itemID = item.itemID
         itemLevel = item.itemLevel
     elseif event == "COMMODITY_SEARCH_RESULTS_UPDATED" then
-        if item == BargainCache.ItemIDs[ItemIDsIndex] then
+        if item == ArbitrageCache.ItemIDs[ItemIDsIndex] then
             ItemIDsIndex = ItemIDsIndex + 1
         end
         local result = C_AuctionHouse.GetCommoditySearchResultInfo(item, 1)
@@ -99,7 +99,7 @@ end
 
 local function Status()
     MerchUtil.PrettyPrint("AHOpen: ", AHOpen)
-    MerchUtil.PrettyPrint(" ItemIDs: ", ItemIDsIndex, "/", #BargainCache.ItemIDs)
+    MerchUtil.PrettyPrint(" ItemIDs: ", ItemIDsIndex, "/", #ArbitrageCache.ItemIDs)
 end
 
 local AHQueryFrame = CreateFrame("Frame", "AHQuery", UIParent)
