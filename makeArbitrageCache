@@ -1,7 +1,6 @@
 MAX=21
-cd ~/dev/wow/
 echo "local ItemIDs = {"
-sort generated/arbitrage.log | uniq -c | sort -nr | head -${MAX} | sed "s/^.*    /    /1"
+sort ~/dev/wow/generated/arbitrage.log | uniq -c | sort -nr | head -${MAX} | sed "s/^.*    /    /1"
 echo "}"
 echo
 echo "ArbitrageCache = {"

@@ -17,6 +17,7 @@ $(ADDON)/$(CACHE_PRICE): $(CACHE)/$(CACHE_PRICE)
 
 $(ADDON)/$(CACHE_ARBITRAGE): $(CACHE)/$(ARBITRAGE_LOG)
 	./makeArbitrageCache > $(ADDON)/$(CACHE_ARBITRAGE)
+	git --no-pager diff $@
 
 cache: $(ADDON)/$(CACHE_PRICE) $(ADDON)/$(CACHE_ARBITRAGE) install
 

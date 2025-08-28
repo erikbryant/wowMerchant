@@ -36,6 +36,8 @@ local function Arbitrage()
         return
     end
 
+    MerchUtil.RemoveFavorites(FavoritesCreated)
+
     if ItemIDsIndex == 1 then
         MerchUtil.PrettyPrint("Scanning for arbitrages...")
     end
