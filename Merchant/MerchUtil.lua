@@ -19,7 +19,7 @@ end
 local function ConcatArgs(...)
     local args = ""
     for i = 1, select("#", ...) do
-        args = args.." "..select(i, ...)
+        args = args.." "..tostring(select(i, ...))
     end
     return args
 end
