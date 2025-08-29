@@ -1,3 +1,5 @@
+local LastMessagePrinted = ""
+
 -- Enable script error reporting
 C_CVar.SetCVar("scriptErrors", 1)
 
@@ -13,10 +15,27 @@ local function Dump(maxEntryCutoff, maxDepthCutoff, ...)
     _G["DEVTOOLS_DEPTH_CUTOFF"] = oldMaxDepthCutoff
 end
 
+-- Return the args concatenated into a single space-delimited string
+local function ConcatArgs(...)
+    local args = ""
+    for i = 1, select("#", ...) do
+        args = args.." "..select(i, ...)
+    end
+    return args
+end
+
 -- Print a message with the addon name (in color) as a prefix
 local function PrettyPrint(...)
+    local message = ConcatArgs(...)
+    if message == LastMessagePrinted then
+        -- Do not repeat messages
+        return
+    end
+
     local prefix = WrapTextInColorCode("Merchant: ", "cfF00CCF")
     print(prefix, ...)
+
+    LastMessagePrinted = message
 end
 
 -- OnMap returns true if the player is on the given map
