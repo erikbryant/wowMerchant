@@ -94,7 +94,7 @@ local function OnEvent(self, event, item)
         end
         price = result.buyoutAmount
     elseif event == "COMMODITY_SEARCH_RESULTS_UPDATED" then
-        itemKey.itemID = item
+        itemKey = C_AuctionHouse.MakeItemKey(item)
         if itemKey.itemID ~= ArbitrageCache.ItemIDs[ItemIDsIndex] then
             -- Not the item we are looking for
             return
@@ -111,7 +111,7 @@ local function OnEvent(self, event, item)
         return
     end
 
-    if price > 0 and price < PriceCache.VendorSellPrice(itemID) then
+    if price > 0 and price < PriceCache.VendorSellPrice(itemKey.itemID) then
         C_AuctionHouse.SetFavoriteItem(itemKey, true)
         table.insert(FavoritesCreated, itemKey)
     end
