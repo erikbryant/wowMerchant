@@ -3,6 +3,16 @@ local FirstTime = true
 local FavoritesCreated = {}
 local ItemIDsIndex = 1
 
+-- Display the favorites dialog
+local function ShowFavorites()
+    local sorts = {
+        {sortOrder = Enum.AuctionHouseSortOrder.Price, reverseSort = false},
+        {sortOrder = Enum.AuctionHouseSortOrder.Name, reverseSort = true},
+    }
+    C_AuctionHouse.SearchForFavorites(sorts)
+end
+
+-- Send a search query to the AH
 local function Send(itemID)
     local itemKey = C_AuctionHouse.MakeItemKey(itemID)
     local sorts = {
@@ -11,6 +21,7 @@ local function Send(itemID)
     C_AuctionHouse.SendSearchQuery(itemKey, sorts, false)
 end
 
+-- Find arbitrages in the AH
 local function ArbitrageHelper()
     if not AHOpen then
         MerchUtil.PrettyPrint("AH is closed")
@@ -20,6 +31,7 @@ local function ArbitrageHelper()
     if ItemIDsIndex > #ArbitrageCache.ItemIDs then
         MerchUtil.PrettyPrint("...done scanning for arbitrages")
         ItemIDsIndex = 1
+        ShowFavorites()
         return
     end
 
@@ -30,6 +42,7 @@ local function ArbitrageHelper()
     C_Timer.After(0.1, ArbitrageHelper)
 end
 
+-- Start a new run of arbitrage finding
 local function Arbitrage()
     if not AHOpen then
         MerchUtil.PrettyPrint("AH is closed")
@@ -104,6 +117,7 @@ local function OnEvent(self, event, item)
     end
 end
 
+-- Dump state
 local function Status()
     MerchUtil.PrettyPrint("AHQuery")
     MerchUtil.PrettyPrint("  AHOpen: ", AHOpen)
