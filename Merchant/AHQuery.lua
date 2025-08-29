@@ -48,13 +48,9 @@ local function Arbitrage()
         MerchUtil.PrettyPrint("AH is closed")
         return
     end
-
     MerchUtil.RemoveFavorites(FavoritesCreated)
-
-    if ItemIDsIndex == 1 then
-        MerchUtil.PrettyPrint("Scanning for arbitrages...")
-    end
-
+    ItemIDsIndex = 1
+    MerchUtil.PrettyPrint("Scanning for arbitrages...")
     ArbitrageHelper()
 end
 
