@@ -65,9 +65,12 @@ local function OnEvent(self, event, item)
     local itemLevel = 0
 
     if event == "ITEM_SEARCH_RESULTS_UPDATED" then
-        if item.itemID == ArbitrageCache.ItemIDs[ItemIDsIndex] then
-            ItemIDsIndex = ItemIDsIndex + 1
+        MerchUtil.PrettyPrint("ISRU: ", item.itemID)
+        if item.itemID ~= ArbitrageCache.ItemIDs[ItemIDsIndex] then
+            -- Not the item we are looking for
+            return
         end
+        ItemIDsIndex = ItemIDsIndex + 1
         local result = C_AuctionHouse.GetItemSearchResultInfo(item, 1)
         if result == nil then
             return
@@ -76,9 +79,12 @@ local function OnEvent(self, event, item)
         itemID = item.itemID
         itemLevel = item.itemLevel
     elseif event == "COMMODITY_SEARCH_RESULTS_UPDATED" then
-        if item == ArbitrageCache.ItemIDs[ItemIDsIndex] then
-            ItemIDsIndex = ItemIDsIndex + 1
+        MerchUtil.PrettyPrint("ISRU: ", item)
+        if item ~= ArbitrageCache.ItemIDs[ItemIDsIndex] then
+            -- Not the item we are looking for
+            return
         end
+        ItemIDsIndex = ItemIDsIndex + 1
         local result = C_AuctionHouse.GetCommoditySearchResultInfo(item, 1)
         if result == nil then
             return
