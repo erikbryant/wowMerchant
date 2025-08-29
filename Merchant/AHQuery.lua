@@ -27,7 +27,7 @@ local function ArbitrageHelper()
     MerchUtil.PrettyPrint("  scan:", itemID, "("..ItemIDsIndex.."/"..#ArbitrageCache.ItemIDs..")")
     Send(itemID)
 
-    C_Timer.After(0.2, ArbitrageHelper)
+    C_Timer.After(0.1, ArbitrageHelper)
 end
 
 local function Arbitrage()
@@ -61,12 +61,16 @@ local function OnEvent(self, event, item)
     end
 
     local price = -1
-    local itemID = 0
-    local itemLevel = 0
+    local itemKey = {
+        itemID = 0,
+        itemLevel = 0,
+        itemSuffix = 0,
+        battlePetSpeciesID = 0,
+    }
 
     if event == "ITEM_SEARCH_RESULTS_UPDATED" then
-        MerchUtil.PrettyPrint("ISRU: ", item.itemID)
-        if item.itemID ~= ArbitrageCache.ItemIDs[ItemIDsIndex] then
+        itemKey = item
+        if itemKey.itemID ~= ArbitrageCache.ItemIDs[ItemIDsIndex] then
             -- Not the item we are looking for
             return
         end
@@ -76,11 +80,9 @@ local function OnEvent(self, event, item)
             return
         end
         price = result.buyoutAmount
-        itemID = item.itemID
-        itemLevel = item.itemLevel
     elseif event == "COMMODITY_SEARCH_RESULTS_UPDATED" then
-        MerchUtil.PrettyPrint("ISRU: ", item)
-        if item ~= ArbitrageCache.ItemIDs[ItemIDsIndex] then
+        itemKey.itemID = item
+        if itemKey.itemID ~= ArbitrageCache.ItemIDs[ItemIDsIndex] then
             -- Not the item we are looking for
             return
         end
@@ -90,7 +92,6 @@ local function OnEvent(self, event, item)
             return
         end
         price = result.unitPrice
-        itemID = item
     end
 
     if price == nil then
@@ -98,12 +99,6 @@ local function OnEvent(self, event, item)
     end
 
     if price > 0 and price < PriceCache.VendorSellPrice(itemID) then
-        local itemKey = {
-            itemID = itemID,
-            itemLevel = itemLevel,
-            itemSuffix = 0,
-            battlePetSpeciesID = 0,
-        }
         C_AuctionHouse.SetFavoriteItem(itemKey, true)
         table.insert(FavoritesCreated, itemKey)
     end
