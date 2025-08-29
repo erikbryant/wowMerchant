@@ -59,9 +59,10 @@ end
 
 -- Status displays debug information
 local function Status()
-    MerchUtil.PrettyPrint("NumAuctionsFoundLastCheck:", NumAuctionsFoundLastCheck)
-    MerchUtil.PrettyPrint("#FavoritesCreated:", #FavoritesCreated)
-    MerchUtil.PrettyPrint("#Timers:", #Timers)
+    MerchUtil.PrettyPrint("AHArbitrage")
+    MerchUtil.PrettyPrint("  NumAuctionsFoundLastCheck:", NumAuctionsFoundLastCheck)
+    MerchUtil.PrettyPrint("  #FavoritesCreated:", #FavoritesCreated)
+    MerchUtil.PrettyPrint("  #Timers:", #Timers)
 end
 
 -- CancelTimers cancels each timer StartTimers started

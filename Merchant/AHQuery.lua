@@ -23,7 +23,7 @@ local function ArbitrageHelper()
         return
     end
 
-    itemID = ArbitrageCache.ItemIDs[ItemIDsIndex]
+    local itemID = ArbitrageCache.ItemIDs[ItemIDsIndex]
     MerchUtil.PrettyPrint("  scan:", itemID, "("..ItemIDsIndex.."/"..#ArbitrageCache.ItemIDs..")")
     Send(itemID)
 
@@ -105,8 +105,11 @@ local function OnEvent(self, event, item)
 end
 
 local function Status()
-    MerchUtil.PrettyPrint("AHOpen: ", AHOpen)
-    MerchUtil.PrettyPrint(" ItemIDs: ", ItemIDsIndex, "/", #ArbitrageCache.ItemIDs)
+    MerchUtil.PrettyPrint("AHQuery")
+    MerchUtil.PrettyPrint("  AHOpen: ", AHOpen)
+    MerchUtil.PrettyPrint("  ItemIDsIndex: ", ItemIDsIndex, "/", #ArbitrageCache.ItemIDs)
+    MerchUtil.PrettyPrint("  FirstTime: ", FirstTime)
+    MerchUtil.PrettyPrint("  #FavoritesCreated: ", #FavoritesCreated)
 end
 
 local AHQueryFrame = CreateFrame("Frame", "AHQuery", UIParent)
