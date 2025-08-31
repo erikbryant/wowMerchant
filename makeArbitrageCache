@@ -1,7 +1,8 @@
-# Limit how many we scan for
-MAX=21
-# Prefer newer entries
-LATEST=350
+# Limit how many items we scan for
+MAX=25
+
+# Prefer newer entries (~50 lines per full scan)
+LATEST=200
 
 echo "local ItemIDs = {"
 tail -${LATEST} ~/dev/wow/generated/arbitrage.log | sort | uniq -c | sort -nr | head -${MAX} | sed "s/^.*    /    /1"
