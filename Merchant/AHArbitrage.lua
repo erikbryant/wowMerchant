@@ -75,7 +75,7 @@ end
 
 -- ScanOpen starts an AH scan
 local function ScanOpen()
-    MerchUtil.PrettyPrint("Scanning for bargains...")
+    MerchUtil.PrettyPrint("Scanning for commodity arbitrages...")
     C_AuctionHouse.ReplicateItems()
     Timers[#Timers+1] = C_Timer.NewTicker(5, CheckForAuctionResults)
     if C_AuctionHouse.HasFavorites() then
