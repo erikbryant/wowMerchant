@@ -1,7 +1,8 @@
 local AHOpen = false
-local FirstTime = true
 local FavoritesCreated = {}
+local ItemIDs = {}
 local ItemIDsIndex = 1
+local Scanning = false
 
 -- Display the favorites dialog
 local function ShowFavorites()
@@ -10,6 +11,32 @@ local function ShowFavorites()
         {sortOrder = Enum.AuctionHouseSortOrder.Name, reverseSort = true},
     }
     C_AuctionHouse.SearchForFavorites(sorts)
+end
+
+-- RemoveFavorites removes all of the favorites that were created this login session
+local function RemoveFavorites()
+    MerchUtil.RemoveFavorites(FavoritesCreated)
+    FavoritesCreated = {}
+end
+
+-- Return the next list of itemIDs to scan for
+local function DefaultsOrFavorites()
+    ItemIDsIndex = 1
+
+    if #ItemIDs == 0 then
+        return ArbitrageCache.ItemIDs
+    end
+
+    if #FavoritesCreated == 0 then
+        return ArbitrageCache.ItemIDs
+    end
+
+    local itemIDs = {}
+    for i=1, #FavoritesCreated do
+        itemIDs[i] = FavoritesCreated[i].itemID
+    end
+
+    return itemIDs
 end
 
 -- Send a search query to the AH
@@ -28,15 +55,16 @@ local function ArbitrageHelper()
         return
     end
 
-    if ItemIDsIndex > #ArbitrageCache.ItemIDs then
-        MerchUtil.PrettyPrint("...done scanning for arbitrages")
-        ItemIDsIndex = 1
+    if ItemIDsIndex > #ItemIDs then
+        MerchUtil.PrettyPrint("...done scanning for item arbitrages")
+        Scanning = false
+        ItemIDs = DefaultsOrFavorites()
         ShowFavorites()
         return
     end
 
-    local itemID = ArbitrageCache.ItemIDs[ItemIDsIndex]
-    MerchUtil.PrettyPrint("  scan:", itemID, "("..ItemIDsIndex.."/"..#ArbitrageCache.ItemIDs..")")
+    local itemID = ItemIDs[ItemIDsIndex]
+    MerchUtil.PrettyPrint("  scan:", itemID, "("..ItemIDsIndex.."/"..#ItemIDs..")")
     Send(itemID)
 
     C_Timer.After(0.1, ArbitrageHelper)
@@ -48,9 +76,14 @@ local function Arbitrage()
         MerchUtil.PrettyPrint("AH is closed")
         return
     end
-    MerchUtil.RemoveFavorites(FavoritesCreated)
-    ItemIDsIndex = 1
-    MerchUtil.PrettyPrint("Scanning for arbitrages...")
+
+    MerchUtil.PrettyPrint("Scanning for item arbitrages...")
+    if #ItemIDs == 0 then
+        ItemIDsIndex = 1
+        ItemIDs = ArbitrageCache.ItemIDs
+    end
+    RemoveFavorites()
+    Scanning = true
     ArbitrageHelper()
 end
 
@@ -58,14 +91,18 @@ end
 local function OnEvent(self, event, item)
     if event == "AUCTION_HOUSE_SHOW" then
         AHOpen = true
-        if FirstTime then
-            FirstTime = false
-            Arbitrage()
-        end
+        Scanning = false
+        Arbitrage()
         return
     elseif event == "AUCTION_HOUSE_CLOSED" then
         AHOpen = false
-        MerchUtil.RemoveFavorites(FavoritesCreated)
+        Scanning = false
+        RemoveFavorites()
+        return
+    end
+
+    if not Scanning then
+        -- This event is not intended for us
         return
     end
 
@@ -79,7 +116,7 @@ local function OnEvent(self, event, item)
 
     if event == "ITEM_SEARCH_RESULTS_UPDATED" then
         itemKey = item
-        if itemKey.itemID ~= ArbitrageCache.ItemIDs[ItemIDsIndex] then
+        if itemKey.itemID ~= ItemIDs[ItemIDsIndex] then
             -- Not the item we are looking for
             return
         end
@@ -91,7 +128,7 @@ local function OnEvent(self, event, item)
         price = result.buyoutAmount
     elseif event == "COMMODITY_SEARCH_RESULTS_UPDATED" then
         itemKey = C_AuctionHouse.MakeItemKey(item)
-        if itemKey.itemID ~= ArbitrageCache.ItemIDs[ItemIDsIndex] then
+        if itemKey.itemID ~= ItemIDs[ItemIDsIndex] then
             -- Not the item we are looking for
             return
         end
@@ -117,8 +154,9 @@ end
 local function Status()
     MerchUtil.PrettyPrint("AHQuery")
     MerchUtil.PrettyPrint("  AHOpen: ", AHOpen)
-    MerchUtil.PrettyPrint("  ItemIDsIndex: ", ItemIDsIndex, "/", #ArbitrageCache.ItemIDs)
-    MerchUtil.PrettyPrint("  FirstTime: ", FirstTime)
+    MerchUtil.PrettyPrint("  Scanning: ", Scanning)
+    MerchUtil.PrettyPrint("  #ArbitrageCache.ItemIDs: ", #ArbitrageCache.ItemIDs)
+    MerchUtil.PrettyPrint("  ItemIDsIndex: ", ItemIDsIndex, "/", #ItemIDs)
     MerchUtil.PrettyPrint("  #FavoritesCreated: ", #FavoritesCreated)
 end
 
