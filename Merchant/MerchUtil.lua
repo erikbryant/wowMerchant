@@ -79,7 +79,6 @@ local function RemoveFavorites(faves)
     for _, itemKey in pairs(faves) do
         C_AuctionHouse.SetFavoriteItem(itemKey, false)
     end
-    faves = {}
 end
 
 MerchUtil = {
