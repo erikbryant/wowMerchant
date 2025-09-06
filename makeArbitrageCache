@@ -1,11 +1,19 @@
 # Limit how many items we generate
 MAX=25
+# Average number of entries generated per full scan
+SCAN_SIZE=40
+# Look-back over several recent runs
+HISTORICAL=$(( 10 * ${SCAN_SIZE} ))
+OUTFILE=/var/tmp/arbitrage.temp
 
-# Prefer newer entries (~50 lines per full scan)
-LATEST=200
+# Collect newest item arbitrages
+tail -${SCAN_SIZE} ~/dev/wow/generated/arbitrage.log | sort | uniq -c | sort -nr | head -${MAX} | sed "s/^.*    /    /1" > ${OUTFILE}
+
+# Add to that the historically most common item arbitrages
+tail -${HISTORICAL} ~/dev/wow/generated/arbitrage.log | sort | uniq -c | sort -nr | head -${MAX} | sed "s/^.*    /    /1" >> ${OUTFILE}
 
 echo "local ItemIDs = {"
-tail -${LATEST} ~/dev/wow/generated/arbitrage.log | sort | uniq -c | sort -nr | head -${MAX} | sed "s/^.*    /    /1"
+sort -un ${OUTFILE}
 echo "}"
 echo
 echo "ArbitrageCache = {"
