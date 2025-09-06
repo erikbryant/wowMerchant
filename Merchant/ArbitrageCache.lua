@@ -2,10 +2,14 @@ local ItemIDs = {
     44739, -- Diamond-Cut Refractor Scope
     86280, -- Pattern: Murderer's Gloves
     86281, -- Pattern: Nightfire Robe
+    87410, -- Plans: Ornate Battleplate of the Master
     87411, -- Plans: Bloodforged Warfists
     191241, -- Draconium Sickle
     191580, -- Recipe: Transmute: Awakened Earth
     201601, -- Runed Serevite Rod
+    221754, -- Ringing Deeps Ingot
+    221927, -- Blame Redirection Device
+    222882, -- Weavercloth Embroidery Thread
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223061, -- Technique: Inscribed Rolling Pin
@@ -16,9 +20,8 @@ local ItemIDs = {
     223098, -- Pattern: Waders of the Unifying Flame
     223101, -- Pattern: Reinforced Setae Flyers
     223102, -- Pattern: Busy Bee's Buckle
-    223657, -- Enchant Ring - Glimmering Critical Strike
-    223663, -- Enchant Ring - Glimmering Haste
     223666, -- Enchant Ring - Glimmering Mastery
+    223732, -- Enchant Cloak - Whisper of Silken Leech
     223738, -- Enchant Cloak - Whisper of Silken Speed
     224434, -- Pattern: Dawnthread Lining
     226035, -- Vantus Rune: Nerub-ar Palace
