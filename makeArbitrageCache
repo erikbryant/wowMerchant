@@ -1,4 +1,4 @@
-# Limit how many items we scan for
+# Limit how many items we generate
 MAX=25
 
 # Prefer newer entries (~50 lines per full scan)
