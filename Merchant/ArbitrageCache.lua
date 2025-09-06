@@ -1,15 +1,11 @@
 local ItemIDs = {
-    49908, -- Primordial Saronite
-    67444, -- Crumbled Statue Remnants
+    44739, -- Diamond-Cut Refractor Scope
     86280, -- Pattern: Murderer's Gloves
     86281, -- Pattern: Nightfire Robe
-    86297, -- Pattern: Stormbreaker Chestguard
     87411, -- Plans: Bloodforged Warfists
-    87412, -- Plans: Chestplate of Limitless Faith
-    165746, -- Magnetic Mining Pick
-    191578, -- Recipe: Transmute: Awakened Fire
+    191241, -- Draconium Sickle
     191580, -- Recipe: Transmute: Awakened Earth
-    201401, -- Iridescent Plume
+    201601, -- Runed Serevite Rod
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223061, -- Technique: Inscribed Rolling Pin
@@ -20,11 +16,14 @@ local ItemIDs = {
     223098, -- Pattern: Waders of the Unifying Flame
     223101, -- Pattern: Reinforced Setae Flyers
     223102, -- Pattern: Busy Bee's Buckle
+    223657, -- Enchant Ring - Glimmering Critical Strike
     223663, -- Enchant Ring - Glimmering Haste
-    223669, -- Enchant Ring - Glimmering Versatility
-    223714, -- Enchant Bracer - Whisper of Armored Leech
+    223666, -- Enchant Ring - Glimmering Mastery
     223738, -- Enchant Cloak - Whisper of Silken Speed
+    224434, -- Pattern: Dawnthread Lining
+    226035, -- Vantus Rune: Nerub-ar Palace
     226643, -- Plans: Beledar's Bulwark
+    234419, -- Steamboil Mounting System
 }
 
 ArbitrageCache = {
