@@ -78,8 +78,8 @@ local function Arbitrage()
     end
 
     MerchUtil.PrettyPrint("Scanning for item arbitrages...")
+    ItemIDsIndex = 1
     if #ItemIDs == 0 then
-        ItemIDsIndex = 1
         ItemIDs = ArbitrageCache.ItemIDs
     end
     RemoveFavorites()
