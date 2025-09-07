@@ -4,12 +4,9 @@ local ItemIDs = {
     86281, -- Pattern: Nightfire Robe
     87410, -- Plans: Ornate Battleplate of the Master
     87411, -- Plans: Bloodforged Warfists
-    191241, -- Draconium Sickle
     191580, -- Recipe: Transmute: Awakened Earth
+    192615, -- Fluorescent Fluid
     201601, -- Runed Serevite Rod
-    221754, -- Ringing Deeps Ingot
-    221927, -- Blame Redirection Device
-    222882, -- Weavercloth Embroidery Thread
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223061, -- Technique: Inscribed Rolling Pin
