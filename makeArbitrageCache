@@ -1,16 +1,27 @@
+#!/bin/zsh
+
+#
+# When accessing the auction house it is useful to have a list of
+# items available--items that generally list for less than their
+# vendor price (arbitrages). This list, if kept short, can be
+# quickly scanned to see what arbitrages might be available.
+# Combine the latest AH scan data with historical data to generate
+# a list that with high probability will find arbitrages.
+#
+
+LATEST_SCAN=~/dev/wow/generated/arbitrageLatest.log
+ALL_SCANS=~/dev/wow/generated/arbitrage.log
 # Limit how many items we generate
 MAX=25
-# Average number of entries generated per full scan
-SCAN_SIZE=40
 # Look-back over several recent runs
-HISTORICAL=$(( 10 * ${SCAN_SIZE} ))
+HISTORICAL=800
 OUTFILE=/var/tmp/arbitrage.temp
 
-# Collect newest item arbitrages
-tail -${SCAN_SIZE} ~/dev/wow/generated/arbitrage.log | sort | uniq -c | sort -nr | head -${MAX} | sed "s/^.*    /    /1" > ${OUTFILE}
+# Collect item arbitrages of the most recent scan
+cat ${LATEST_SCAN} | sort | uniq -c | sort -nr | head -${MAX} | sed "s/^.*    /    /1" > ${OUTFILE}
 
 # Add to that the historically most common item arbitrages
-tail -${HISTORICAL} ~/dev/wow/generated/arbitrage.log | sort | uniq -c | sort -nr | head -${MAX} | sed "s/^.*    /    /1" >> ${OUTFILE}
+tail -${HISTORICAL} ${ALL_SCANS} | sort | uniq -c | sort -nr | head -${MAX} | sed "s/^.*    /    /1" >> ${OUTFILE}
 
 echo "local ItemIDs = {"
 sort -un ${OUTFILE}
