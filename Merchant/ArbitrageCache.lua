@@ -7,10 +7,10 @@ local ItemIDs = {
     87411, -- Plans: Bloodforged Warfists
     94573, -- Direhorn Runt
     191236, -- Draconium Leatherworker's Toolset
-    191241, -- Draconium Sickle
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
     198910, -- Technique: Illusion Parchment: Shadow Orb
+    201601, -- Runed Serevite Rod
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223061, -- Technique: Inscribed Rolling Pin
