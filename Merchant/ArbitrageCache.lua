@@ -1,7 +1,5 @@
 local ItemIDs = {
     29363, -- Mana Wyrmling
-    86280, -- Pattern: Murderer's Gloves
-    86281, -- Pattern: Nightfire Robe
     87410, -- Plans: Ornate Battleplate of the Master
     87411, -- Plans: Bloodforged Warfists
     94573, -- Direhorn Runt
@@ -9,7 +7,10 @@ local ItemIDs = {
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
     198910, -- Technique: Illusion Parchment: Shadow Orb
+    201315, -- Illusory Adornment: Earth
+    218339, -- Burning Cinderbee Setae
     221876, -- Potion Bomb of Recovery
+    222575, -- Hasty Alchemist's Mixing Rod
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223061, -- Technique: Inscribed Rolling Pin
@@ -22,7 +23,6 @@ local ItemIDs = {
     223102, -- Pattern: Busy Bee's Buckle
     224424, -- Pattern: Artisan Chef's Hat
     224434, -- Pattern: Dawnthread Lining
-    226035, -- Vantus Rune: Nerub-ar Palace
     226643, -- Plans: Beledar's Bulwark
 }
 
