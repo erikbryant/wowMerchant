@@ -1,23 +1,17 @@
 local ItemIDs = {
-    4499, -- Huge Brown Sack
-    12365, -- Dense Stone
-    21877, -- Netherweave Cloth
+    29363, -- Mana Wyrmling
     30283, -- Pattern: Boots of the Long Road
-    30323, -- Plans: Boots of the Protector
+    33470, -- Frostweave Cloth
     86280, -- Pattern: Murderer's Gloves
     86281, -- Pattern: Nightfire Robe
-    86284, -- Pattern: Raven Lord's Gloves
     86379, -- Pattern: Robe of Eternal Rule
     87410, -- Plans: Ornate Battleplate of the Master
     87411, -- Plans: Bloodforged Warfists
-    102542, -- Ancient Pandaren Spices
-    102543, -- Aged Mogu'shan Cheese
-    187704, -- Protoflesh
+    94573, -- Direhorn Runt
+    191236, -- Draconium Leatherworker's Toolset
     191241, -- Draconium Sickle
+    191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
-    194476, -- Plans: Obsidian Seared Hexsword
-    201601, -- Runed Serevite Rod
-    220230, -- Punctured Intestine
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223061, -- Technique: Inscribed Rolling Pin
@@ -28,8 +22,10 @@ local ItemIDs = {
     223098, -- Pattern: Waders of the Unifying Flame
     223101, -- Pattern: Reinforced Setae Flyers
     223102, -- Pattern: Busy Bee's Buckle
-    223666, -- Enchant Ring - Glimmering Mastery
+    224424, -- Pattern: Artisan Chef's Hat
     224434, -- Pattern: Dawnthread Lining
+    226643, -- Plans: Beledar's Bulwark
+    234419, -- Steamboil Mounting System
 }
 
 ArbitrageCache = {
