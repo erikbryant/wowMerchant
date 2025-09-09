@@ -93,60 +93,20 @@ local function OnEvent(self, event, item)
         AHOpen = true
         Scanning = false
         Arbitrage()
-        return
     elseif event == "AUCTION_HOUSE_CLOSED" then
         AHOpen = false
         Scanning = false
         RemoveFavorites()
-        return
-    end
-
-    if not Scanning then
-        -- This event is not intended for us
-        return
-    end
-
-    local price = -1
-    local itemKey = {
-        itemID = 0,
-        itemLevel = 0,
-        itemSuffix = 0,
-        battlePetSpeciesID = 0,
-    }
-
-    if event == "ITEM_SEARCH_RESULTS_UPDATED" then
-        itemKey = item
-        if itemKey.itemID ~= ItemIDs[ItemIDsIndex] then
-            -- Not the item we are looking for
-            return
-        end
+    elseif event == "ITEM_SEARCH_RESULTS_UPDATED" and Scanning and item.itemID == ItemIDs[ItemIDsIndex] then
         ItemIDsIndex = ItemIDsIndex + 1
         local result = C_AuctionHouse.GetItemSearchResultInfo(item, 1)
-        if result == nil then
+        if result == nil or result.buyoutAmount == nil then
             return
         end
-        price = result.buyoutAmount
-    elseif event == "COMMODITY_SEARCH_RESULTS_UPDATED" then
-        itemKey = C_AuctionHouse.MakeItemKey(item)
-        if itemKey.itemID ~= ItemIDs[ItemIDsIndex] then
-            -- Not the item we are looking for
-            return
+        if result.buyoutAmount > 0 and result.buyoutAmount < PriceCache.VendorSellPrice(item.itemID) then
+            C_AuctionHouse.SetFavoriteItem(item, true)
+            table.insert(FavoritesCreated, item)
         end
-        ItemIDsIndex = ItemIDsIndex + 1
-        local result = C_AuctionHouse.GetCommoditySearchResultInfo(item, 1)
-        if result == nil then
-            return
-        end
-        price = result.unitPrice
-    end
-
-    if price == nil then
-        return
-    end
-
-    if price > 0 and price < PriceCache.VendorSellPrice(itemKey.itemID) then
-        C_AuctionHouse.SetFavoriteItem(itemKey, true)
-        table.insert(FavoritesCreated, itemKey)
     end
 end
 
@@ -166,7 +126,6 @@ AHQueryFrame:SetScript("OnEvent", OnEvent)
 AHQueryFrame:RegisterEvent("AUCTION_HOUSE_SHOW")
 AHQueryFrame:RegisterEvent("AUCTION_HOUSE_CLOSED")
 AHQueryFrame:RegisterEvent("ITEM_SEARCH_RESULTS_UPDATED")
-AHQueryFrame:RegisterEvent("COMMODITY_SEARCH_RESULTS_UPDATED")
 
 AHQuery = {
     Arbitrage = Arbitrage,
