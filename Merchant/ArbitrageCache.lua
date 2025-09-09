@@ -3,13 +3,11 @@ local ItemIDs = {
     87410, -- Plans: Ornate Battleplate of the Master
     87411, -- Plans: Bloodforged Warfists
     94573, -- Direhorn Runt
+    117445, -- Clefthoof Hide Satchel
     191236, -- Draconium Leatherworker's Toolset
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
     198910, -- Technique: Illusion Parchment: Shadow Orb
-    201315, -- Illusory Adornment: Earth
-    218339, -- Burning Cinderbee Setae
-    221876, -- Potion Bomb of Recovery
     222575, -- Hasty Alchemist's Mixing Rod
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
