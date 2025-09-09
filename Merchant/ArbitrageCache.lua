@@ -1,17 +1,18 @@
 local ItemIDs = {
+    12833, -- Plans: Hammer of the Titans
     29363, -- Mana Wyrmling
     87410, -- Plans: Ornate Battleplate of the Master
     87411, -- Plans: Bloodforged Warfists
     94573, -- Direhorn Runt
     117445, -- Clefthoof Hide Satchel
     191236, -- Draconium Leatherworker's Toolset
+    191242, -- Draconium Pickaxe
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
     198910, -- Technique: Illusion Parchment: Shadow Orb
     222575, -- Hasty Alchemist's Mixing Rod
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
-    223061, -- Technique: Inscribed Rolling Pin
     223085, -- Design: Fractured Gemstone Locket
     223086, -- Design: Insightful Blasphemite
     223087, -- Design: Culminating Blasphemite
