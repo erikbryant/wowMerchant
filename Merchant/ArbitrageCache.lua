@@ -1,10 +1,7 @@
 local ItemIDs = {
     12833, -- Plans: Hammer of the Titans
-    29363, -- Mana Wyrmling
     87410, -- Plans: Ornate Battleplate of the Master
-    87411, -- Plans: Bloodforged Warfists
     94573, -- Direhorn Runt
-    117445, -- Clefthoof Hide Satchel
     191236, -- Draconium Leatherworker's Toolset
     191242, -- Draconium Pickaxe
     191578, -- Recipe: Transmute: Awakened Fire
