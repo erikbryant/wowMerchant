@@ -14,7 +14,7 @@ ALL_SCANS=~/dev/wow/generated/arbitrage.log
 # Limit how many items we generate
 MAX=25
 # Look-back over several recent runs
-HISTORICAL=800
+HISTORICAL=1000
 OUTFILE=/var/tmp/arbitrage.temp
 
 # Collect item arbitrages of the most recent scan
