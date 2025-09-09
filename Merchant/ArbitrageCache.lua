@@ -4,6 +4,7 @@ local ItemIDs = {
     94573, -- Direhorn Runt
     191236, -- Draconium Leatherworker's Toolset
     191242, -- Draconium Pickaxe
+    191304, -- Sturdy Expedition Shovel
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
     198910, -- Technique: Illusion Parchment: Shadow Orb
