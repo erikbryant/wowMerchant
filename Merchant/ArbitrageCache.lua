@@ -2,14 +2,14 @@ local ItemIDs = {
     12833, -- Plans: Hammer of the Titans
     44822, -- Albino Snake
     48120, -- Obsidian Hatchling
-    87410, -- Plans: Ornate Battleplate of the Master
+    87408, -- Plans: Unyielding Bloodplate
     94573, -- Direhorn Runt
     117445, -- Clefthoof Hide Satchel
-    191236, -- Draconium Leatherworker's Toolset
+    191239, -- Draconium Needle Set
     191242, -- Draconium Pickaxe
     191304, -- Sturdy Expedition Shovel
     191578, -- Recipe: Transmute: Awakened Fire
-    198910, -- Technique: Illusion Parchment: Shadow Orb
+    191580, -- Recipe: Transmute: Awakened Earth
     222575, -- Hasty Alchemist's Mixing Rod
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
