@@ -1,16 +1,20 @@
 local ItemIDs = {
     12833, -- Plans: Hammer of the Titans
+    30306, -- Pattern: Boots of Utter Darkness
+    30308, -- Pattern: Hurricane Boots
     44822, -- Albino Snake
     48120, -- Obsidian Hatchling
-    87408, -- Plans: Unyielding Bloodplate
+    86284, -- Pattern: Raven Lord's Gloves
+    87409, -- Plans: Gauntlets of Battle Command
     94573, -- Direhorn Runt
-    117445, -- Clefthoof Hide Satchel
-    191239, -- Draconium Needle Set
-    191242, -- Draconium Pickaxe
-    191304, -- Sturdy Expedition Shovel
+    118427, -- Autographed Hearthstone Card
+    136972, -- Tome of Hex: Cockroach
+    191237, -- Draconium Blacksmith's Hammer
+    191241, -- Draconium Sickle
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
     222575, -- Hasty Alchemist's Mixing Rod
+    222577, -- Burnt Rolling Pin
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223061, -- Technique: Inscribed Rolling Pin
