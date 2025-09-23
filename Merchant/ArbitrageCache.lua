@@ -1,18 +1,17 @@
 local ItemIDs = {
-    30306, -- Pattern: Boots of Utter Darkness
     30308, -- Pattern: Hurricane Boots
-    44822, -- Albino Snake
+    30324, -- Plans: Red Havoc Boots
     86284, -- Pattern: Raven Lord's Gloves
-    87409, -- Plans: Gauntlets of Battle Command
     94573, -- Direhorn Runt
+    117445, -- Clefthoof Hide Satchel
     118427, -- Autographed Hearthstone Card
+    191236, -- Draconium Leatherworker's Toolset
     191237, -- Draconium Blacksmith's Hammer
     191239, -- Draconium Needle Set
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
     197973, -- Pattern: Crimson Combatant's Adamant Chainmail
-    222575, -- Hasty Alchemist's Mixing Rod
-    222577, -- Burnt Rolling Pin
+    198907, -- Technique: Illusion Parchment: Chilling Wind
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223061, -- Technique: Inscribed Rolling Pin
