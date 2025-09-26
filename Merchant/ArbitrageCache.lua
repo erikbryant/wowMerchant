@@ -1,20 +1,16 @@
 local ItemIDs = {
-    30305, -- Pattern: Boots of Natural Grace
     30306, -- Pattern: Boots of Utter Darkness
-    30323, -- Plans: Boots of the Protector
     30324, -- Plans: Red Havoc Boots
     86280, -- Pattern: Murderer's Gloves
     94573, -- Direhorn Runt
     117445, -- Clefthoof Hide Satchel
+    118427, -- Autographed Hearthstone Card
     191236, -- Draconium Leatherworker's Toolset
-    191237, -- Draconium Blacksmith's Hammer
-    191239, -- Draconium Needle Set
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
-    197973, -- Pattern: Crimson Combatant's Adamant Chainmail
-    198899, -- Technique: Renewed Proto-Drake: Predator Pattern
-    198905, -- Technique: Illusion Parchment: Aqua Torrent
     198907, -- Technique: Illusion Parchment: Chilling Wind
+    201970, -- Stolen Illidari Blindfold
+    221797, -- Bismuth-Fueled Samophlange
     222573, -- Lightweight Scribe's Quill
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
