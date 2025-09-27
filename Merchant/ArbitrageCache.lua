@@ -1,13 +1,15 @@
 local ItemIDs = {
     30306, -- Pattern: Boots of Utter Darkness
     30324, -- Plans: Red Havoc Boots
+    86272, -- Pattern: Fists of Lightning
     86280, -- Pattern: Murderer's Gloves
+    86380, -- Pattern: Imperial Silk Gloves
     94573, -- Direhorn Runt
     117445, -- Clefthoof Hide Satchel
-    118427, -- Autographed Hearthstone Card
     191236, -- Draconium Leatherworker's Toolset
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
+    198905, -- Technique: Illusion Parchment: Aqua Torrent
     198907, -- Technique: Illusion Parchment: Chilling Wind
     201970, -- Stolen Illidari Blindfold
     221797, -- Bismuth-Fueled Samophlange
