@@ -1,17 +1,19 @@
 local ItemIDs = {
-    30306, -- Pattern: Boots of Utter Darkness
+    48120, -- Obsidian Hatchling
     86272, -- Pattern: Fists of Lightning
+    86281, -- Pattern: Nightfire Robe
     86380, -- Pattern: Imperial Silk Gloves
+    86381, -- Pattern: Legacy of the Emperor
+    87413, -- Plans: Gauntlets of Unbound Devotion
     94573, -- Direhorn Runt
     117445, -- Clefthoof Hide Satchel
+    191304, -- Sturdy Expedition Shovel
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
     193884, -- Pattern: Infurious Chainhelm Protector
     194298, -- Pattern: Forlorn Funeral Pall
     198899, -- Technique: Renewed Proto-Drake: Predator Pattern
     198905, -- Technique: Illusion Parchment: Aqua Torrent
-    198907, -- Technique: Illusion Parchment: Chilling Wind
-    201970, -- Stolen Illidari Blindfold
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223061, -- Technique: Inscribed Rolling Pin
