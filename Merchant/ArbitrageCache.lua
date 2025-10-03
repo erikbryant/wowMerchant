@@ -5,6 +5,7 @@ local ItemIDs = {
     86381, -- Pattern: Legacy of the Emperor
     87413, -- Plans: Gauntlets of Unbound Devotion
     94573, -- Direhorn Runt
+    104202, -- Bonkers
     117445, -- Clefthoof Hide Satchel
     191304, -- Sturdy Expedition Shovel
     191578, -- Recipe: Transmute: Awakened Fire
@@ -21,6 +22,7 @@ local ItemIDs = {
     223101, -- Pattern: Reinforced Setae Flyers
     223102, -- Pattern: Busy Bee's Buckle
     224434, -- Pattern: Dawnthread Lining
+    226643, -- Plans: Beledar's Bulwark
 }
 
 ArbitrageCache = {
