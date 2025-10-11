@@ -1,16 +1,20 @@
 local ItemIDs = {
-    48120, -- Obsidian Hatchling
-    86281, -- Pattern: Nightfire Robe
-    86380, -- Pattern: Imperial Silk Gloves
-    86381, -- Pattern: Legacy of the Emperor
-    87413, -- Plans: Gauntlets of Unbound Devotion
+    4499, -- Huge Brown Sack
+    44822, -- Albino Snake
+    60223, -- High-Powered Bolt Gun
+    86279, -- Pattern: Liferuned Leather Gloves
+    86283, -- Pattern: Raiment of Blood and Bone
     94573, -- Direhorn Runt
     104202, -- Bonkers
-    117445, -- Clefthoof Hide Satchel
+    191237, -- Draconium Blacksmith's Hammer
+    191242, -- Draconium Pickaxe
     191304, -- Sturdy Expedition Shovel
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
-    193480, -- Durable Pack
+    194476, -- Plans: Obsidian Seared Hexsword
+    201968, -- Enormous Grain of Salt
+    215119, -- Right-Handed Magnifying Glass
+    221797, -- Bismuth-Fueled Samophlange
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223061, -- Technique: Inscribed Rolling Pin
@@ -22,7 +26,6 @@ local ItemIDs = {
     223101, -- Pattern: Reinforced Setae Flyers
     223102, -- Pattern: Busy Bee's Buckle
     224434, -- Pattern: Dawnthread Lining
-    226643, -- Plans: Beledar's Bulwark
 }
 
 ArbitrageCache = {
