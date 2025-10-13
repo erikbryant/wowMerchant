@@ -1,16 +1,16 @@
 local ItemIDs = {
-    4499, -- Huge Brown Sack
     44822, -- Albino Snake
-    60223, -- High-Powered Bolt Gun
     86279, -- Pattern: Liferuned Leather Gloves
     86283, -- Pattern: Raiment of Blood and Bone
     94573, -- Direhorn Runt
     104202, -- Bonkers
+    191236, -- Draconium Leatherworker's Toolset
     191237, -- Draconium Blacksmith's Hammer
     191242, -- Draconium Pickaxe
     191304, -- Sturdy Expedition Shovel
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
+    193534, -- Wildercloth Chef's Hat
     194476, -- Plans: Obsidian Seared Hexsword
     201968, -- Enormous Grain of Salt
     215119, -- Right-Handed Magnifying Glass
