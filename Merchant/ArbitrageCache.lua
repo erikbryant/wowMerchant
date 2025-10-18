@@ -3,14 +3,11 @@ local ItemIDs = {
     86279, -- Pattern: Liferuned Leather Gloves
     86283, -- Pattern: Raiment of Blood and Bone
     94573, -- Direhorn Runt
-    104202, -- Bonkers
     191236, -- Draconium Leatherworker's Toolset
     191237, -- Draconium Blacksmith's Hammer
-    191242, -- Draconium Pickaxe
-    191304, -- Sturdy Expedition Shovel
+    191238, -- Draconium Leatherworker's Knife
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
-    193534, -- Wildercloth Chef's Hat
     194476, -- Plans: Obsidian Seared Hexsword
     201968, -- Enormous Grain of Salt
     215119, -- Right-Handed Magnifying Glass
@@ -25,7 +22,9 @@ local ItemIDs = {
     223098, -- Pattern: Waders of the Unifying Flame
     223101, -- Pattern: Reinforced Setae Flyers
     223102, -- Pattern: Busy Bee's Buckle
+    224424, -- Pattern: Artisan Chef's Hat
     224434, -- Pattern: Dawnthread Lining
+    226643, -- Plans: Beledar's Bulwark
 }
 
 ArbitrageCache = {
