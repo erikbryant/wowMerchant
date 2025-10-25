@@ -3,13 +3,12 @@ local ItemIDs = {
     86279, -- Pattern: Liferuned Leather Gloves
     86283, -- Pattern: Raiment of Blood and Bone
     94573, -- Direhorn Runt
+    117445, -- Clefthoof Hide Satchel
     191236, -- Draconium Leatherworker's Toolset
     191237, -- Draconium Blacksmith's Hammer
     191238, -- Draconium Leatherworker's Knife
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
-    194476, -- Plans: Obsidian Seared Hexsword
-    201968, -- Enormous Grain of Salt
     215119, -- Right-Handed Magnifying Glass
     221797, -- Bismuth-Fueled Samophlange
     223051, -- Plans: Artisan Skinning Knife
