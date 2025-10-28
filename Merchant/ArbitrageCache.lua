@@ -9,8 +9,8 @@ local ItemIDs = {
     191238, -- Draconium Leatherworker's Knife
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
+    201968, -- Enormous Grain of Salt
     215119, -- Right-Handed Magnifying Glass
-    221797, -- Bismuth-Fueled Samophlange
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223061, -- Technique: Inscribed Rolling Pin
