@@ -15,6 +15,7 @@ local ItemIDs = {
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223061, -- Technique: Inscribed Rolling Pin
     223085, -- Design: Fractured Gemstone Locket
+    223086, -- Design: Insightful Blasphemite
     223087, -- Design: Culminating Blasphemite
     223096, -- Pattern: Roiling Thunderstrike Talons
     223098, -- Pattern: Waders of the Unifying Flame
