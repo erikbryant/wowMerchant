@@ -1,16 +1,16 @@
 local ItemIDs = {
     86279, -- Pattern: Liferuned Leather Gloves
     86284, -- Pattern: Raven Lord's Gloves
+    87408, -- Plans: Unyielding Bloodplate
     94573, -- Direhorn Runt
     191236, -- Draconium Leatherworker's Toolset
     191240, -- Draconium Skinning Knife
     191304, -- Sturdy Expedition Shovel
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
-    198116, -- Recipe: Salt-Baked Fishcake
     201734, -- Technique: Cliffside Wylderdrake: Silver and Blue Armor
-    201971, -- Threatening Note
     221797, -- Bismuth-Fueled Samophlange
+    222573, -- Lightweight Scribe's Quill
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223061, -- Technique: Inscribed Rolling Pin
@@ -23,7 +23,6 @@ local ItemIDs = {
     223102, -- Pattern: Busy Bee's Buckle
     224020, -- Recipe: Vicious Flask of the Wrecking Ball
     224424, -- Pattern: Artisan Chef's Hat
-    224434, -- Pattern: Dawnthread Lining
     226643, -- Plans: Beledar's Bulwark
 }
 

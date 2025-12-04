@@ -1,4 +1,4 @@
-## Interface: 110205
+## Interface: 110207
 ## Version: 1.0.4
 ## Title: Merchant
 ## Notes: Convenience features for buying and selling items
