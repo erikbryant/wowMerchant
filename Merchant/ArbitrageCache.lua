@@ -2,16 +2,14 @@ local ItemIDs = {
     21283, -- Grimoire of Corruption
     21939, -- Fel Elemental Rod
     29363, -- Mana Wyrmling
+    86281, -- Pattern: Nightfire Robe
     87408, -- Plans: Unyielding Bloodplate
     94573, -- Direhorn Runt
-    191236, -- Draconium Leatherworker's Toolset
     191237, -- Draconium Blacksmith's Hammer
-    191304, -- Sturdy Expedition Shovel
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
-    194476, -- Plans: Obsidian Seared Hexsword
     194483, -- Plans: Obsidian Seared Slicer
-    221797, -- Bismuth-Fueled Samophlange
+    201734, -- Technique: Cliffside Wylderdrake: Silver and Blue Armor
     222573, -- Lightweight Scribe's Quill
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
