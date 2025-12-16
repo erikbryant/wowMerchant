@@ -11,8 +11,7 @@ local ItemIDs = {
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
     194483, -- Plans: Obsidian Seared Slicer
-    199239, -- Schematic: Tinker: Alarm-O-Turret
-    201734, -- Technique: Cliffside Wylderdrake: Silver and Blue Armor
+    221797, -- Bismuth-Fueled Samophlange
     222573, -- Lightweight Scribe's Quill
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
@@ -23,7 +22,6 @@ local ItemIDs = {
     223098, -- Pattern: Waders of the Unifying Flame
     223101, -- Pattern: Reinforced Setae Flyers
     223102, -- Pattern: Busy Bee's Buckle
-    224020, -- Recipe: Vicious Flask of the Wrecking Ball
     224424, -- Pattern: Artisan Chef's Hat
     224434, -- Pattern: Dawnthread Lining
 }
