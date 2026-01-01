@@ -5,14 +5,15 @@ local ItemIDs = {
     41788, -- Design: Beaming Earthsiege Diamond
     44822, -- Albino Snake
     86238, -- Pattern: Chestguard of Nemeses
-    86283, -- Pattern: Raiment of Blood and Bone
     86284, -- Pattern: Raven Lord's Gloves
     87408, -- Plans: Unyielding Bloodplate
     94573, -- Direhorn Runt
     118427, -- Autographed Hearthstone Card
     191236, -- Draconium Leatherworker's Toolset
+    191242, -- Draconium Pickaxe
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
+    201410, -- Powerful Purple Thing
     221797, -- Bismuth-Fueled Samophlange
     222573, -- Lightweight Scribe's Quill
     223051, -- Plans: Artisan Skinning Knife
