@@ -4,7 +4,6 @@ local ItemIDs = {
     41788, -- Design: Beaming Earthsiege Diamond
     44822, -- Albino Snake
     86238, -- Pattern: Chestguard of Nemeses
-    86272, -- Pattern: Fists of Lightning
     86284, -- Pattern: Raven Lord's Gloves
     87408, -- Plans: Unyielding Bloodplate
     94573, -- Direhorn Runt
@@ -13,7 +12,6 @@ local ItemIDs = {
     191240, -- Draconium Skinning Knife
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
-    194476, -- Plans: Obsidian Seared Hexsword
     221797, -- Bismuth-Fueled Samophlange
     222573, -- Lightweight Scribe's Quill
     223051, -- Plans: Artisan Skinning Knife
