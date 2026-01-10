@@ -1,6 +1,6 @@
 local ItemIDs = {
     10050, -- Mageweave Bag
-    21841, -- Netherweave Bag
+    23817, -- Schematic: Titanium Toolbox
     41788, -- Design: Beaming Earthsiege Diamond
     44822, -- Albino Snake
     86238, -- Pattern: Chestguard of Nemeses
@@ -8,12 +8,14 @@ local ItemIDs = {
     87408, -- Plans: Unyielding Bloodplate
     94573, -- Direhorn Runt
     118427, -- Autographed Hearthstone Card
+    136972, -- Tome of Hex: Cockroach
     191236, -- Draconium Leatherworker's Toolset
+    191237, -- Draconium Blacksmith's Hammer
     191240, -- Draconium Skinning Knife
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
+    199239, -- Schematic: Tinker: Alarm-O-Turret
     221797, -- Bismuth-Fueled Samophlange
-    222573, -- Lightweight Scribe's Quill
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223085, -- Design: Fractured Gemstone Locket
