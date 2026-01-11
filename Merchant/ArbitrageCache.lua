@@ -8,7 +8,6 @@ local ItemIDs = {
     87408, -- Plans: Unyielding Bloodplate
     94573, -- Direhorn Runt
     118427, -- Autographed Hearthstone Card
-    136972, -- Tome of Hex: Cockroach
     191236, -- Draconium Leatherworker's Toolset
     191237, -- Draconium Blacksmith's Hammer
     191240, -- Draconium Skinning Knife
