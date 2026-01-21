@@ -1,9 +1,7 @@
 local ItemIDs = {
     23817, -- Schematic: Titanium Toolbox
-    30324, -- Plans: Red Havoc Boots
     60335, -- Thick Hide Pack
-    86283, -- Pattern: Raiment of Blood and Bone
-    86284, -- Pattern: Raven Lord's Gloves
+    87409, -- Plans: Gauntlets of Battle Command
     87410, -- Plans: Ornate Battleplate of the Master
     94573, -- Direhorn Runt
     118427, -- Autographed Hearthstone Card
@@ -15,7 +13,6 @@ local ItemIDs = {
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
     199239, -- Schematic: Tinker: Alarm-O-Turret
-    208302, -- Pattern: Verdant Combatant's Adamant Epaulets
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223061, -- Technique: Inscribed Rolling Pin
