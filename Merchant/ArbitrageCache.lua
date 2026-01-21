@@ -1,5 +1,6 @@
 local ItemIDs = {
     23817, -- Schematic: Titanium Toolbox
+    30323, -- Plans: Boots of the Protector
     60335, -- Thick Hide Pack
     87409, -- Plans: Gauntlets of Battle Command
     87410, -- Plans: Ornate Battleplate of the Master
