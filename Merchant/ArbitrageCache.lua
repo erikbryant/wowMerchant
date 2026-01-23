@@ -1,12 +1,12 @@
 local ItemIDs = {
     23817, -- Schematic: Titanium Toolbox
-    30323, -- Plans: Boots of the Protector
     60335, -- Thick Hide Pack
     87409, -- Plans: Gauntlets of Battle Command
     87410, -- Plans: Ornate Battleplate of the Master
     94573, -- Direhorn Runt
     118427, -- Autographed Hearthstone Card
     136972, -- Tome of Hex: Cockroach
+    158879, -- Bloodstained Message
     191237, -- Draconium Blacksmith's Hammer
     191240, -- Draconium Skinning Knife
     191241, -- Draconium Sickle
