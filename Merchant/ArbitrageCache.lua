@@ -1,11 +1,12 @@
 local ItemIDs = {
+    12833, -- Plans: Hammer of the Titans
     23817, -- Schematic: Titanium Toolbox
+    30308, -- Pattern: Hurricane Boots
     60335, -- Thick Hide Pack
-    87408, -- Plans: Unyielding Bloodplate
-    87409, -- Plans: Gauntlets of Battle Command
     87410, -- Plans: Ornate Battleplate of the Master
-    94573, -- Direhorn Runt
+    87411, -- Plans: Bloodforged Warfists
     118427, -- Autographed Hearthstone Card
+    119212, -- Winning Hand
     136972, -- Tome of Hex: Cockroach
     191237, -- Draconium Blacksmith's Hammer
     191240, -- Draconium Skinning Knife
