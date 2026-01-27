@@ -1,21 +1,20 @@
 local ItemIDs = {
     12833, -- Plans: Hammer of the Titans
     23817, -- Schematic: Titanium Toolbox
+    30306, -- Pattern: Boots of Utter Darkness
     30308, -- Pattern: Hurricane Boots
     60335, -- Thick Hide Pack
+    86280, -- Pattern: Murderer's Gloves
     87410, -- Plans: Ornate Battleplate of the Master
     87411, -- Plans: Bloodforged Warfists
     118427, -- Autographed Hearthstone Card
     119212, -- Winning Hand
-    136972, -- Tome of Hex: Cockroach
     191237, -- Draconium Blacksmith's Hammer
-    191240, -- Draconium Skinning Knife
-    191241, -- Draconium Sickle
-    191304, -- Sturdy Expedition Shovel
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
     198715, -- Runed Draconium Rod
     199239, -- Schematic: Tinker: Alarm-O-Turret
+    215121, -- Incanter's Shard
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223061, -- Technique: Inscribed Rolling Pin
