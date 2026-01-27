@@ -3,6 +3,7 @@ local ItemIDs = {
     23817, -- Schematic: Titanium Toolbox
     30306, -- Pattern: Boots of Utter Darkness
     30308, -- Pattern: Hurricane Boots
+    48120, -- Obsidian Hatchling
     60335, -- Thick Hide Pack
     86280, -- Pattern: Murderer's Gloves
     87410, -- Plans: Ornate Battleplate of the Master
@@ -13,8 +14,8 @@ local ItemIDs = {
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
     198715, -- Runed Draconium Rod
-    199239, -- Schematic: Tinker: Alarm-O-Turret
     215121, -- Incanter's Shard
+    221797, -- Bismuth-Fueled Samophlange
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223061, -- Technique: Inscribed Rolling Pin
