@@ -1,7 +1,6 @@
 local ItemIDs = {
     12833, -- Plans: Hammer of the Titans
     30306, -- Pattern: Boots of Utter Darkness
-    30323, -- Plans: Boots of the Protector
     44822, -- Albino Snake
     48120, -- Obsidian Hatchling
     86280, -- Pattern: Murderer's Gloves
@@ -9,7 +8,9 @@ local ItemIDs = {
     87411, -- Plans: Bloodforged Warfists
     94573, -- Direhorn Runt
     117445, -- Clefthoof Hide Satchel
+    118427, -- Autographed Hearthstone Card
     119212, -- Winning Hand
+    191238, -- Draconium Leatherworker's Knife
     191304, -- Sturdy Expedition Shovel
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
