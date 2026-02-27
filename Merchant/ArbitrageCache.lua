@@ -24,6 +24,7 @@ local ItemIDs = {
     223101, -- Pattern: Reinforced Setae Flyers
     223102, -- Pattern: Busy Bee's Buckle
     224434, -- Pattern: Dawnthread Lining
+    263516, -- Cosmic Ritual Bowl
 }
 
 ArbitrageCache = {
