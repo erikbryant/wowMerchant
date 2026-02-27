@@ -1,5 +1,6 @@
 local ItemIDs = {
     30305, -- Pattern: Boots of Natural Grace
+    30307, -- Pattern: Boots of the Crimson Hawk
     67387, -- "Carriage" Signature Bag
     86238, -- Pattern: Chestguard of Nemeses
     86279, -- Pattern: Liferuned Leather Gloves
@@ -7,13 +8,14 @@ local ItemIDs = {
     86382, -- Pattern: Touch of the Light
     87411, -- Plans: Bloodforged Warfists
     94573, -- Direhorn Runt
-    117445, -- Clefthoof Hide Satchel
     118427, -- Autographed Hearthstone Card
     146953, -- Scraps
     191237, -- Draconium Blacksmith's Hammer
     191238, -- Draconium Leatherworker's Knife
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
+    193877, -- Pattern: Infurious Boots of Reprieve
+    210170, -- Design: Dreamtender's Charm
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223085, -- Design: Fractured Gemstone Locket
