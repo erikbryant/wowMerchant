@@ -14,8 +14,6 @@ local ItemIDs = {
     191238, -- Draconium Leatherworker's Knife
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
-    193877, -- Pattern: Infurious Boots of Reprieve
-    210170, -- Design: Dreamtender's Charm
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223085, -- Design: Fractured Gemstone Locket
