@@ -2,9 +2,7 @@ local ItemIDs = {
     21841, -- Netherweave Bag
     30305, -- Pattern: Boots of Natural Grace
     30307, -- Pattern: Boots of the Crimson Hawk
-    67387, -- "Carriage" Signature Bag
     86238, -- Pattern: Chestguard of Nemeses
-    86279, -- Pattern: Liferuned Leather Gloves
     86382, -- Pattern: Touch of the Light
     87411, -- Plans: Bloodforged Warfists
     87412, -- Plans: Chestplate of Limitless Faith
@@ -12,8 +10,10 @@ local ItemIDs = {
     146953, -- Scraps
     191236, -- Draconium Leatherworker's Toolset
     191237, -- Draconium Blacksmith's Hammer
+    191240, -- Draconium Skinning Knife
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
+    199228, -- Schematic: Grease Grenade
     221797, -- Bismuth-Fueled Samophlange
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
@@ -24,7 +24,9 @@ local ItemIDs = {
     223098, -- Pattern: Waders of the Unifying Flame
     223101, -- Pattern: Reinforced Setae Flyers
     223102, -- Pattern: Busy Bee's Buckle
+    224114, -- Runed Bismuth Rod
     224434, -- Pattern: Dawnthread Lining
+    263519, -- Snake Oil
 }
 
 ArbitrageCache = {
