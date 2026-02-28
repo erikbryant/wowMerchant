@@ -2,7 +2,6 @@ local ItemIDs = {
     21841, -- Netherweave Bag
     30305, -- Pattern: Boots of Natural Grace
     30307, -- Pattern: Boots of the Crimson Hawk
-    86382, -- Pattern: Touch of the Light
     87411, -- Plans: Bloodforged Warfists
     87412, -- Plans: Chestplate of Limitless Faith
     94573, -- Direhorn Runt
@@ -22,6 +21,7 @@ local ItemIDs = {
     223098, -- Pattern: Waders of the Unifying Flame
     223101, -- Pattern: Reinforced Setae Flyers
     223102, -- Pattern: Busy Bee's Buckle
+    224114, -- Runed Bismuth Rod
     224434, -- Pattern: Dawnthread Lining
     263519, -- Snake Oil
 }
