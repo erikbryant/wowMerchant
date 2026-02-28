@@ -4,6 +4,7 @@ local ItemIDs = {
     30307, -- Pattern: Boots of the Crimson Hawk
     87411, -- Plans: Bloodforged Warfists
     87412, -- Plans: Chestplate of Limitless Faith
+    87413, -- Plans: Gauntlets of Unbound Devotion
     94573, -- Direhorn Runt
     146953, -- Scraps
     191236, -- Draconium Leatherworker's Toolset
@@ -21,6 +22,7 @@ local ItemIDs = {
     223098, -- Pattern: Waders of the Unifying Flame
     223101, -- Pattern: Reinforced Setae Flyers
     223102, -- Pattern: Busy Bee's Buckle
+    224018, -- Recipe: Vicious Flask of Classical Spirits
     224114, -- Runed Bismuth Rod
     224434, -- Pattern: Dawnthread Lining
     263519, -- Snake Oil
