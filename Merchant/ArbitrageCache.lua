@@ -23,8 +23,8 @@ local ItemIDs = {
     223102, -- Pattern: Busy Bee's Buckle
     224018, -- Recipe: Vicious Flask of Classical Spirits
     224434, -- Pattern: Dawnthread Lining
+    254749, -- Phial of Burrow Balm
     263515, -- Broken Soulstealing Mirror
-    263519, -- Snake Oil
 }
 
 ArbitrageCache = {
