@@ -9,7 +9,6 @@ local ItemIDs = {
     146953, -- Scraps
     191236, -- Draconium Leatherworker's Toolset
     191237, -- Draconium Blacksmith's Hammer
-    191240, -- Draconium Skinning Knife
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
     221797, -- Bismuth-Fueled Samophlange
@@ -23,8 +22,8 @@ local ItemIDs = {
     223101, -- Pattern: Reinforced Setae Flyers
     223102, -- Pattern: Busy Bee's Buckle
     224018, -- Recipe: Vicious Flask of Classical Spirits
-    224114, -- Runed Bismuth Rod
     224434, -- Pattern: Dawnthread Lining
+    263515, -- Broken Soulstealing Mirror
     263519, -- Snake Oil
 }
 
