@@ -2,6 +2,7 @@ local ItemIDs = {
     21841, -- Netherweave Bag
     30305, -- Pattern: Boots of Natural Grace
     30307, -- Pattern: Boots of the Crimson Hawk
+    86297, -- Pattern: Stormbreaker Chestguard
     87411, -- Plans: Bloodforged Warfists
     87412, -- Plans: Chestplate of Limitless Faith
     87413, -- Plans: Gauntlets of Unbound Devotion
@@ -10,6 +11,7 @@ local ItemIDs = {
     191237, -- Draconium Blacksmith's Hammer
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
+    194483, -- Plans: Obsidian Seared Slicer
     221797, -- Bismuth-Fueled Samophlange
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
