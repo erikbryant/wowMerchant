@@ -2,6 +2,7 @@ local ItemIDs = {
     21841, -- Netherweave Bag
     30305, -- Pattern: Boots of Natural Grace
     30307, -- Pattern: Boots of the Crimson Hawk
+    30323, -- Plans: Boots of the Protector
     87411, -- Plans: Bloodforged Warfists
     87412, -- Plans: Chestplate of Limitless Faith
     87413, -- Plans: Gauntlets of Unbound Devotion
@@ -24,7 +25,6 @@ local ItemIDs = {
     224018, -- Recipe: Vicious Flask of Classical Spirits
     224434, -- Pattern: Dawnthread Lining
     263515, -- Broken Soulstealing Mirror
-    263519, -- Snake Oil
 }
 
 ArbitrageCache = {
