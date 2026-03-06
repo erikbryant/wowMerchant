@@ -24,7 +24,6 @@ local ItemIDs = {
     224434, -- Pattern: Dawnthread Lining
     254749, -- Phial of Burrow Balm
     263515, -- Broken Soulstealing Mirror
-    263518, -- Expensive-Looking Find
 }
 
 ArbitrageCache = {
