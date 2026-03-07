@@ -1,15 +1,17 @@
 local ItemIDs = {
     21841, -- Netherweave Bag
     30305, -- Pattern: Boots of Natural Grace
+    30307, -- Pattern: Boots of the Crimson Hawk
     30323, -- Plans: Boots of the Protector
-    87411, -- Plans: Bloodforged Warfists
     87412, -- Plans: Chestplate of Limitless Faith
     87413, -- Plans: Gauntlets of Unbound Devotion
     94573, -- Direhorn Runt
+    118427, -- Autographed Hearthstone Card
     191236, -- Draconium Leatherworker's Toolset
     191237, -- Draconium Blacksmith's Hammer
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
+    201410, -- Powerful Purple Thing
     221797, -- Bismuth-Fueled Samophlange
     222577, -- Burnt Rolling Pin
     223051, -- Plans: Artisan Skinning Knife
@@ -22,8 +24,10 @@ local ItemIDs = {
     223102, -- Pattern: Busy Bee's Buckle
     224018, -- Recipe: Vicious Flask of Classical Spirits
     224434, -- Pattern: Dawnthread Lining
+    244713, -- Farstrider Clampers
     254749, -- Phial of Burrow Balm
     263515, -- Broken Soulstealing Mirror
+    267395, -- Technique: Homely Wall Shelves
 }
 
 ArbitrageCache = {
