@@ -3,7 +3,6 @@ local ItemIDs = {
     30305, -- Pattern: Boots of Natural Grace
     30307, -- Pattern: Boots of the Crimson Hawk
     30323, -- Plans: Boots of the Protector
-    86272, -- Pattern: Fists of Lightning
     87412, -- Plans: Chestplate of Limitless Faith
     87413, -- Plans: Gauntlets of Unbound Devotion
     94573, -- Direhorn Runt
