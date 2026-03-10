@@ -2,14 +2,12 @@ local ItemIDs = {
     21841, -- Netherweave Bag
     30307, -- Pattern: Boots of the Crimson Hawk
     30323, -- Plans: Boots of the Protector
-    86281, -- Pattern: Nightfire Robe
     87412, -- Plans: Chestplate of Limitless Faith
     87413, -- Plans: Gauntlets of Unbound Devotion
     94573, -- Direhorn Runt
     191235, -- Draconium Blacksmith's Toolbox
     191236, -- Draconium Leatherworker's Toolset
     191237, -- Draconium Blacksmith's Hammer
-    191304, -- Sturdy Expedition Shovel
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
     221797, -- Bismuth-Fueled Samophlange
