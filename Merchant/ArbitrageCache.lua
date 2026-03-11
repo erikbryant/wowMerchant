@@ -2,10 +2,11 @@ local ItemIDs = {
     21841, -- Netherweave Bag
     30307, -- Pattern: Boots of the Crimson Hawk
     30323, -- Plans: Boots of the Protector
+    86379, -- Pattern: Robe of Eternal Rule
     87412, -- Plans: Chestplate of Limitless Faith
     87413, -- Plans: Gauntlets of Unbound Devotion
     94573, -- Direhorn Runt
-    191235, -- Draconium Blacksmith's Toolbox
+    112384, -- Reflecting Prism
     191236, -- Draconium Leatherworker's Toolset
     191237, -- Draconium Blacksmith's Hammer
     191578, -- Recipe: Transmute: Awakened Fire
@@ -16,11 +17,13 @@ local ItemIDs = {
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223085, -- Design: Fractured Gemstone Locket
     223086, -- Design: Insightful Blasphemite
+    223087, -- Design: Culminating Blasphemite
     223096, -- Pattern: Roiling Thunderstrike Talons
     223098, -- Pattern: Waders of the Unifying Flame
     223101, -- Pattern: Reinforced Setae Flyers
     223102, -- Pattern: Busy Bee's Buckle
     224018, -- Recipe: Vicious Flask of Classical Spirits
+    224114, -- Runed Bismuth Rod
     254749, -- Phial of Burrow Balm
     263515, -- Broken Soulstealing Mirror
     267395, -- Technique: Homely Wall Shelves
