@@ -1,8 +1,6 @@
 local ItemIDs = {
     21841, -- Netherweave Bag
-    30307, -- Pattern: Boots of the Crimson Hawk
     30323, -- Plans: Boots of the Protector
-    86379, -- Pattern: Robe of Eternal Rule
     87412, -- Plans: Chestplate of Limitless Faith
     87413, -- Plans: Gauntlets of Unbound Devotion
     94573, -- Direhorn Runt
@@ -24,6 +22,7 @@ local ItemIDs = {
     223102, -- Pattern: Busy Bee's Buckle
     224018, -- Recipe: Vicious Flask of Classical Spirits
     224114, -- Runed Bismuth Rod
+    240953, -- Bold Biographer's Bifocals
     254749, -- Phial of Burrow Balm
     263515, -- Broken Soulstealing Mirror
     267395, -- Technique: Homely Wall Shelves
