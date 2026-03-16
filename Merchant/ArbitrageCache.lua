@@ -1,16 +1,14 @@
 local ItemIDs = {
-    21841, -- Netherweave Bag
     30323, -- Plans: Boots of the Protector
-    87412, -- Plans: Chestplate of Limitless Faith
+    87411, -- Plans: Bloodforged Warfists
     87413, -- Plans: Gauntlets of Unbound Devotion
     94573, -- Direhorn Runt
-    112384, -- Reflecting Prism
+    118427, -- Autographed Hearthstone Card
     191236, -- Draconium Leatherworker's Toolset
     191237, -- Draconium Blacksmith's Hammer
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
     221797, -- Bismuth-Fueled Samophlange
-    222577, -- Burnt Rolling Pin
     223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223085, -- Design: Fractured Gemstone Locket
@@ -20,10 +18,11 @@ local ItemIDs = {
     223098, -- Pattern: Waders of the Unifying Flame
     223101, -- Pattern: Reinforced Setae Flyers
     223102, -- Pattern: Busy Bee's Buckle
-    224018, -- Recipe: Vicious Flask of Classical Spirits
-    224114, -- Runed Bismuth Rod
     240953, -- Bold Biographer's Bifocals
     254749, -- Phial of Burrow Balm
+    256761, -- Formula: Enchant Shoulders - Voidtouched
+    258134, -- Pattern: Voidstrider Saddlebag
+    258499, -- Technique: Restful Bronze Bench
     263515, -- Broken Soulstealing Mirror
     267395, -- Technique: Homely Wall Shelves
 }
