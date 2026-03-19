@@ -1,8 +1,8 @@
 local ItemIDs = {
     30323, -- Plans: Boots of the Protector
+    48120, -- Obsidian Hatchling
     94573, -- Direhorn Runt
     118427, -- Autographed Hearthstone Card
-    191236, -- Draconium Leatherworker's Toolset
     191237, -- Draconium Blacksmith's Hammer
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
@@ -25,7 +25,6 @@ local ItemIDs = {
     256761, -- Formula: Enchant Shoulders - Voidtouched
     258134, -- Pattern: Voidstrider Saddlebag
     258499, -- Technique: Restful Bronze Bench
-    263515, -- Broken Soulstealing Mirror
     267395, -- Technique: Homely Wall Shelves
 }
 
