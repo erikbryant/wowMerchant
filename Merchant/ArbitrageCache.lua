@@ -1,16 +1,16 @@
 local ItemIDs = {
-    30323, -- Plans: Boots of the Protector
-    48120, -- Obsidian Hatchling
+    86283, -- Pattern: Raiment of Blood and Bone
     94573, -- Direhorn Runt
     118427, -- Autographed Hearthstone Card
     191237, -- Draconium Blacksmith's Hammer
+    191239, -- Draconium Needle Set
+    191304, -- Sturdy Expedition Shovel
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
     193880, -- Pattern: Wind Spirit's Lasso
     194642, -- Design: Choker of Shielding
     198910, -- Technique: Illusion Parchment: Shadow Orb
     221797, -- Bismuth-Fueled Samophlange
-    223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223085, -- Design: Fractured Gemstone Locket
     223086, -- Design: Insightful Blasphemite
