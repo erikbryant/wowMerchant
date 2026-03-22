@@ -1,13 +1,12 @@
 local ItemIDs = {
+    44822, -- Albino Snake
     86283, -- Pattern: Raiment of Blood and Bone
     94573, -- Direhorn Runt
     118427, -- Autographed Hearthstone Card
     191237, -- Draconium Blacksmith's Hammer
     191239, -- Draconium Needle Set
-    191304, -- Sturdy Expedition Shovel
     191578, -- Recipe: Transmute: Awakened Fire
     191580, -- Recipe: Transmute: Awakened Earth
-    193880, -- Pattern: Wind Spirit's Lasso
     194642, -- Design: Choker of Shielding
     198910, -- Technique: Illusion Parchment: Shadow Orb
     221797, -- Bismuth-Fueled Samophlange
@@ -18,9 +17,9 @@ local ItemIDs = {
     223096, -- Pattern: Roiling Thunderstrike Talons
     223098, -- Pattern: Waders of the Unifying Flame
     223101, -- Pattern: Reinforced Setae Flyers
-    223102, -- Pattern: Busy Bee's Buckle
     240953, -- Bold Biographer's Bifocals
     240954, -- Fantastic Font Focuser
+    244175, -- Runed Refulgent Copper Rod
     254749, -- Phial of Burrow Balm
     256761, -- Formula: Enchant Shoulders - Voidtouched
     258134, -- Pattern: Voidstrider Saddlebag
