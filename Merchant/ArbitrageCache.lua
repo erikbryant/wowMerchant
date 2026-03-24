@@ -10,6 +10,7 @@ local ItemIDs = {
     194642, -- Design: Choker of Shielding
     198910, -- Technique: Illusion Parchment: Shadow Orb
     221797, -- Bismuth-Fueled Samophlange
+    223051, -- Plans: Artisan Skinning Knife
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223085, -- Design: Fractured Gemstone Locket
     223086, -- Design: Insightful Blasphemite
@@ -17,9 +18,9 @@ local ItemIDs = {
     223096, -- Pattern: Roiling Thunderstrike Talons
     223098, -- Pattern: Waders of the Unifying Flame
     223101, -- Pattern: Reinforced Setae Flyers
+    224424, -- Pattern: Artisan Chef's Hat
     240953, -- Bold Biographer's Bifocals
     240954, -- Fantastic Font Focuser
-    244175, -- Runed Refulgent Copper Rod
     254749, -- Phial of Burrow Balm
     256761, -- Formula: Enchant Shoulders - Voidtouched
     258134, -- Pattern: Voidstrider Saddlebag
