@@ -6,6 +6,7 @@ local ItemIDs = {
     30306, -- Pattern: Boots of Utter Darkness
     86272, -- Pattern: Fists of Lightning
     86281, -- Pattern: Nightfire Robe
+    94573, -- Direhorn Runt
     110289, -- Fat Sleeper Bait
     110293, -- Abyssal Gulper Eel Bait
     112384, -- Reflecting Prism
@@ -15,9 +16,8 @@ local ItemIDs = {
     223060, -- Technique: Patient Alchemist's Mixing Rod
     223085, -- Design: Fractured Gemstone Locket
     223101, -- Pattern: Reinforced Setae Flyers
+    240953, -- Bold Biographer's Bifocals
     240954, -- Fantastic Font Focuser
-    240955, -- Silvermoon Loupes
-    256625, -- Pattern: Hexwoven Strand
     256761, -- Formula: Enchant Shoulders - Voidtouched
     258134, -- Pattern: Voidstrider Saddlebag
     258499, -- Technique: Restful Bronze Bench
