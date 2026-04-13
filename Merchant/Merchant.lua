@@ -1,5 +1,5 @@
-hooksecurefunc("PlaySound", function(id) print("SoundKit ID played: "..id) end)
-hooksecurefunc("PlaySoundFile", function(id) print("FileDataID played: "..id) end)
+-- hooksecurefunc("PlaySound", function(id) print("SoundKit ID played: "..id) end)
+-- hooksecurefunc("PlaySoundFile", function(id) print("FileDataID played: "..id) end)
 
 -- Hakmud of Argus, Traveling Trader (_Farewell)
 MuteSoundFile(557322) -- Remember the lessons of the past
