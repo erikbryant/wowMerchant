@@ -10,12 +10,12 @@
 #
 
 LATEST_SCAN=~/dev/wow/generated/arbitrageLatest.log
-ALL_SCANS=~/dev/wow/generated/arbitrage.log
-# Limit how many items we generate
-MAX=20
-# Look-back over several recent runs
-HISTORICAL=1000
 OUTFILE=/var/tmp/arbitrage.temp
+
+# Look back at arbitrages from past runs
+ALL_SCANS=~/dev/wow/generated/arbitrage.log
+HISTORICAL=1000
+MAX=20
 
 # Collect item arbitrages of the most recent scan
 cat ${LATEST_SCAN} | sort | uniq -c | sort -nr | sed "s/^.*    /    /1" > ${OUTFILE}
