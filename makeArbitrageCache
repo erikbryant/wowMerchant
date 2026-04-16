@@ -20,8 +20,9 @@ OUTFILE=/var/tmp/arbitrage.temp
 # Collect item arbitrages of the most recent scan
 cat ${LATEST_SCAN} | sort | uniq -c | sort -nr | sed "s/^.*    /    /1" > ${OUTFILE}
 
+# !!!! This is only useful if we do NOT run the scanner each time we start WoW
 # Add to that the historically most common item arbitrages
-tail -${HISTORICAL} ${ALL_SCANS} | sort | uniq -c | sort -nr | head -${MAX} | sed "s/^.*    /    /1" >> ${OUTFILE}
+#tail -${HISTORICAL} ${ALL_SCANS} | sort | uniq -c | sort -nr | head -${MAX} | sed "s/^.*    /    /1" >> ${OUTFILE}
 
 echo "local ItemIDs = {"
 sort -un ${OUTFILE}
