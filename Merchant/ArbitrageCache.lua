@@ -1,8 +1,10 @@
 local ItemIDs = {
-    191580, -- Recipe: Transmute: Awakened Earth
+    4500, -- Traveler's Backpack
+    223060, -- Technique: Patient Alchemist's Mixing Rod
     223085, -- Design: Fractured Gemstone Locket
-    238018, -- Sun-Blessed Blacksmith's Hammer
-    240959, -- Sin'dorei Jeweler's Loupes
+    223101, -- Pattern: Reinforced Setae Flyers
+    240953, -- Bold Biographer's Bifocals
+    256625, -- Pattern: Hexwoven Strand
     256761, -- Formula: Enchant Shoulders - Voidtouched
     258134, -- Pattern: Voidstrider Saddlebag
     258499, -- Technique: Restful Bronze Bench
