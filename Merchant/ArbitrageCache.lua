@@ -1,12 +1,11 @@
 local ItemIDs = {
-    4500, -- Traveler's Backpack
-    223060, -- Technique: Patient Alchemist's Mixing Rod
+    86238, -- Pattern: Chestguard of Nemeses
+    86272, -- Pattern: Fists of Lightning
+    86279, -- Pattern: Liferuned Leather Gloves
     223085, -- Design: Fractured Gemstone Locket
     223101, -- Pattern: Reinforced Setae Flyers
-    240953, -- Bold Biographer's Bifocals
-    256625, -- Pattern: Hexwoven Strand
+    239646, -- Bright Linen Tailoring Robe
     256761, -- Formula: Enchant Shoulders - Voidtouched
-    258134, -- Pattern: Voidstrider Saddlebag
     258499, -- Technique: Restful Bronze Bench
     267395, -- Technique: Homely Wall Shelves
 }
