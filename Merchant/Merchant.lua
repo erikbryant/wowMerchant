@@ -28,12 +28,11 @@ MuteSoundFile(564330) -- Good day
 MuteSoundFile(564292) -- Let the light of the new moon guide you
 
 -- Clock tower hourly bell
-MuteSoundFile(6594) -- Alliance
-MuteSoundFile(133120) -- Alliance
-MuteSoundFile(6595) -- Horde
-MuteSoundFile(132646) -- Horde
-MuteSoundFile(9154) -- Generic / Karazhan
-MuteSoundFile(134107) -- Generic / Karazhan
-MuteSoundFile(6674) -- Night Elf
+MuteSoundFile(567482)
+MuteSoundFile(567483)
+MuteSoundFile(567484)
+MuteSoundFile(567485)
+MuteSoundFile(567486)
+MuteSoundFile(567487)
 
 MerchUtil.PrettyPrint("Loaded and ready to sell!  ["..MerchGlobal.SLASH_CMD.."]")
