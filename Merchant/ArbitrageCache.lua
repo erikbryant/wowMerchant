@@ -1,11 +1,13 @@
 local ItemIDs = {
-    191304, -- Sturdy Expedition Shovel
-    191580, -- Recipe: Transmute: Awakened Earth
+    30324, -- Plans: Red Havoc Boots
+    95408, -- Waterlogged Zandalari Journal
+    95409, -- Iron-Bound Zandalari Journal
+    95411, -- Torn Zandalari Journal
+    95412, -- Frayed Zandalari Journal
     223060, -- Technique: Patient Alchemist's Mixing Rod
-    223101, -- Pattern: Reinforced Setae Flyers
-    240953, -- Bold Biographer's Bifocals
-    258125, -- Pattern: Sunfire Sash
-    258134, -- Pattern: Voidstrider Saddlebag
+    223085, -- Design: Fractured Gemstone Locket
+    226643, -- Plans: Beledar's Bulwark
+    240954, -- Fantastic Font Focuser
     258499, -- Technique: Restful Bronze Bench
     267395, -- Technique: Homely Wall Shelves
 }
