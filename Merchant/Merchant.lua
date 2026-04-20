@@ -1,5 +1,8 @@
+-- Various ways to find the sound file ID
 -- hooksecurefunc("PlaySound", function(id) print("SoundKit ID played: "..id) end)
 -- hooksecurefunc("PlaySoundFile", function(id) print("FileDataID played: "..id) end)
+-- Leatrix Sounds: /lts
+-- Sound ID Finder: /sid
 
 -- Hakmud of Argus, Traveling Trader (_Farewell)
 MuteSoundFile(557322) -- Remember the lessons of the past
@@ -27,8 +30,11 @@ MuteSoundFile(564291) -- We are bound by a common enemy
 MuteSoundFile(564330) -- Good day
 MuteSoundFile(564292) -- Let the light of the new moon guide you
 
+-- Battle Pets
+MuteSoundFile(4618432) -- Pilot
+
 -- Clock tower hourly bell
-MuteSoundFile(567482)
+MuteSoundFile(567482) -- These do not work :(
 MuteSoundFile(567483)
 MuteSoundFile(567484)
 MuteSoundFile(567485)
