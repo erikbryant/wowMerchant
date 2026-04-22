@@ -1,20 +1,13 @@
 local ItemIDs = {
-    95408, -- Waterlogged Zandalari Journal
-    95409, -- Iron-Bound Zandalari Journal
-    95412, -- Frayed Zandalari Journal
-    191237, -- Draconium Blacksmith's Hammer
+    4499, -- Huge Brown Sack
+    41787, -- Design: Thundering Skyflare Diamond
     191578, -- Recipe: Transmute: Awakened Fire
-    191580, -- Recipe: Transmute: Awakened Earth
-    223051, -- Plans: Artisan Skinning Knife
+    223060, -- Technique: Patient Alchemist's Mixing Rod
     223085, -- Design: Fractured Gemstone Locket
-    223101, -- Pattern: Reinforced Setae Flyers
-    225484, -- Technique: Algari Competitor's Lamp
-    238012, -- Thalassian Leatherworker's Knife
-    244175, -- Runed Refulgent Copper Rod
-    244619, -- Hideworker's Cover
+    224114, -- Runed Bismuth Rod
+    240953, -- Bold Biographer's Bifocals
+    240954, -- Fantastic Font Focuser
     256761, -- Formula: Enchant Shoulders - Voidtouched
-    258134, -- Pattern: Voidstrider Saddlebag
-    267395, -- Technique: Homely Wall Shelves
 }
 
 ArbitrageCache = {
