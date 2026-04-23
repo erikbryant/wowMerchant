@@ -11,7 +11,7 @@ LATEST=~/dev/wow/generated/arbitrageLatest.log
 
 echo "local ItemIDs = {"
 # Collect item arbitrages of the most recent scan
-cat ${LATEST} | sort | uniq -c | sort -nr | sed "s/^.*    /    /1" | sort -un
+sort -un ${LATEST}
 echo "}"
 echo
 echo "ArbitrageCache = {"
