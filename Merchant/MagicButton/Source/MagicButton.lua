@@ -1,4 +1,13 @@
+function MagicButton_Print(message)
+  print("|cc935e0ffMagic Button|r: " .. message)
+end
+
 function MagicButton()
+  if AuctionHouseFrame == nil then
+    MagicButton_Print("Go find an Auction House")
+    return
+  end
+
   if AuctionHouseFrame.ItemBuyFrame:IsVisible() then
     AuctionHouseFrame.ItemBuyFrame.BuyoutFrame.BuyoutButton:Click()
     StaticPopup1Button1:Click()
@@ -7,10 +16,6 @@ function MagicButton()
   if AuctionHouseFrame.CommoditiesBuyFrame:IsVisible() then
     MagicButton_BuyCommodityMagic()
   end
-end
-
-function MagicButton_Print(message)
-  print("|cc935e0ffMagic Button|r: " .. message)
 end
 
 local function CreateCommodityBuyFrame()
