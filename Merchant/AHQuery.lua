@@ -85,7 +85,7 @@ local function DefaultsOrFavorites()
 
     local itemIDs = {}
     for i=1, #FavoritesCreated do
-        itemIDs[i] = FavoritesCreated[i].itemID
+        itemIDs[i] = {FavoritesCreated[i].itemID, FavoritesCreated[i].itemLevel}
     end
 
     return itemIDs
@@ -97,11 +97,11 @@ end
 
 -- Send a search query to the AH
 local function Send(itemID)
-    local itemKey = C_AuctionHouse.MakeItemKey(itemID)
+    local itemKey = C_AuctionHouse.MakeItemKey(itemID[1])
     local sorts = {
         {sortOrder=Enum.AuctionHouseSortOrder.Price, reverseSort=false},
     }
-    itemKey.itemLevel = LookupItemLevel(itemID, itemKey.itemLevel)
+    itemKey.itemLevel = itemID[2]
     C_AuctionHouse.SendSearchQuery(itemKey, sorts, false)
 end
 
@@ -121,7 +121,7 @@ local function ArbitrageHelper()
     end
 
     local itemID = ItemIDs[ItemIDsIndex]
-    MerchUtil.PrettyPrint("  scan:", itemID, "("..ItemIDsIndex.."/"..#ItemIDs..")")
+    MerchUtil.PrettyPrint("  scan:", itemID[1]..":"..itemID[2], "("..ItemIDsIndex.."/"..#ItemIDs..")")
     Send(itemID)
 
     C_Timer.After(0.1, ArbitrageHelper)
@@ -154,7 +154,7 @@ local function OnEvent(self, event, item)
         AHOpen = false
         Scanning = false
         RemoveFavorites()
-    elseif event == "ITEM_SEARCH_RESULTS_UPDATED" and Scanning and item.itemID == ItemIDs[ItemIDsIndex] then
+    elseif event == "ITEM_SEARCH_RESULTS_UPDATED" and Scanning and item.itemID == ItemIDs[ItemIDsIndex][1] then
         ItemIDsIndex = ItemIDsIndex + 1
         -- Results are sorted by price, so we only need to check the first result
         local result = C_AuctionHouse.GetItemSearchResultInfo(item, 1)
