@@ -154,10 +154,13 @@ local function OnEvent(self, event, item)
         AHOpen = false
         Scanning = false
         RemoveFavorites()
-    elseif event == "ITEM_SEARCH_RESULTS_UPDATED" and Scanning and item.itemID == ItemIDs[ItemIDsIndex][1] then
+    elseif event == "ITEM_SEARCH_RESULTS_UPDATED" and Scanning and ItemIDsIndex <= #ItemIDs and item.itemID == ItemIDs[ItemIDsIndex][1] then
         ItemIDsIndex = ItemIDsIndex + 1
         -- Results are sorted by price, so we only need to check the first result
         local result = C_AuctionHouse.GetItemSearchResultInfo(item, 1)
+--         if result ~= nil then
+--             MerchUtil.PrettyPrint("#########", item.itemLevel)
+--         end
         if result ~= nil and result.buyoutAmount ~= nil and result.buyoutAmount > 0 and result.buyoutAmount < PriceCache.VendorSellPrice(item.itemID) then
             C_AuctionHouse.SetFavoriteItem(item, true)
             table.insert(FavoritesCreated, item)
