@@ -76,6 +76,10 @@ local function tryToSell(bag, slot)
     if itemID == nil then
         return
     end
+    if PriceCache.Cosmetic(itemID) then
+        MerchUtil.PrettyPrint("Skipping cosmetic item")
+        return
+    end
 
     itemID = tonumber(itemID)
     local item = Item:CreateFromItemID(itemID)
