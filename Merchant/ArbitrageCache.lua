@@ -1,17 +1,11 @@
 local ItemIDs = {
-    {136972, 0}, -- Tome of Hex: Cockroach
+    {191578, 0}, -- Recipe: Transmute: Awakened Fire
+    {221786, 0}, -- Spring-Loaded Bismuth Fabric Cutters
     {223085, 0}, -- Design: Fractured Gemstone Locket
-    {244627, 180}, -- Apprentice Smith's Apron
-    {244627, 186}, -- Apprentice Smith's Apron
-    {244627, 192}, -- Apprentice Smith's Apron
-    {244627, 199}, -- Apprentice Smith's Apron
-    {244627, 206}, -- Apprentice Smith's Apron
-    {258499, 0}, -- Technique: Restful Bronze Bench
+    {223098, 0}, -- Pattern: Waders of the Unifying Flame
+    {223101, 0}, -- Pattern: Reinforced Setae Flyers
+    {258134, 0}, -- Pattern: Voidstrider Saddlebag
     {267395, 0}, -- Technique: Homely Wall Shelves
-    {44622, 0}, -- Cask of Dalaran White
-    {48120, 0}, -- Obsidian Hatchling
-    {86379, 0}, -- Pattern: Robe of Eternal Rule
-    {86382, 0}, -- Pattern: Touch of the Light
 }
 
 ArbitrageCache = {
