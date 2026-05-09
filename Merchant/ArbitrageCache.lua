@@ -1,12 +1,11 @@
 local ItemIDs = {
-    {222577, 0}, -- Burnt Rolling Pin
-    {223060, 0}, -- Technique: Patient Alchemist's Mixing Rod
+    {191580, 0}, -- Recipe: Transmute: Awakened Earth
+    {205129, 0}, -- Technique: Winding Slitherdrake: Curved Chin Horn
     {223085, 0}, -- Design: Fractured Gemstone Locket
-    {240953, 180}, -- Bold Biographer's Bifocals
-    {240953, 186}, -- Bold Biographer's Bifocals
-    {240953, 192}, -- Bold Biographer's Bifocals
-    {240953, 199}, -- Bold Biographer's Bifocals
-    {240953, 206}, -- Bold Biographer's Bifocals
+    {258499, 0}, -- Technique: Restful Bronze Bench
+    {267395, 0}, -- Technique: Homely Wall Shelves
+    {60335, 0}, -- Thick Hide Pack
+    {86280, 0}, -- Pattern: Murderer's Gloves
 }
 
 ArbitrageCache = {
