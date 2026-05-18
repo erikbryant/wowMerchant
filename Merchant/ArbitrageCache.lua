@@ -1,20 +1,23 @@
 local ItemIDs = {
-    {118427, 0}, -- Autographed Hearthstone Card
-    {191237, 70}, -- Draconium Blacksmith's Hammer
-    {191237, 71}, -- Draconium Blacksmith's Hammer
-    {191237, 72}, -- Draconium Blacksmith's Hammer
-    {191237, 73}, -- Draconium Blacksmith's Hammer
-    {191237, 74}, -- Draconium Blacksmith's Hammer
-    {191578, 0}, -- Recipe: Transmute: Awakened Fire
-    {191580, 0}, -- Recipe: Transmute: Awakened Earth
-    {223060, 0}, -- Technique: Patient Alchemist's Mixing Rod
+    {158879, 0}, -- Bloodstained Message
+    {222575, 105}, -- Hasty Alchemist's Mixing Rod
+    {222575, 79}, -- Hasty Alchemist's Mixing Rod
+    {222575, 85}, -- Hasty Alchemist's Mixing Rod
+    {222575, 91}, -- Hasty Alchemist's Mixing Rod
     {223085, 0}, -- Design: Fractured Gemstone Locket
     {223101, 0}, -- Pattern: Reinforced Setae Flyers
-    {256761, 0}, -- Formula: Enchant Shoulders - Voidtouched
+    {245775, 180}, -- Hobbyist Scribe's Quill
+    {245775, 186}, -- Hobbyist Scribe's Quill
+    {245775, 192}, -- Hobbyist Scribe's Quill
+    {245775, 199}, -- Hobbyist Scribe's Quill
+    {245775, 206}, -- Hobbyist Scribe's Quill
+    {258499, 0}, -- Technique: Restful Bronze Bench
     {267395, 0}, -- Technique: Homely Wall Shelves
     {29363, 0}, -- Mana Wyrmling
-    {30306, 0}, -- Pattern: Boots of Utter Darkness
-    {86238, 0}, -- Pattern: Chestguard of Nemeses
+    {30308, 0}, -- Pattern: Hurricane Boots
+    {30324, 0}, -- Plans: Red Havoc Boots
+    {86280, 0}, -- Pattern: Murderer's Gloves
+    {86380, 0}, -- Pattern: Imperial Silk Gloves
 }
 
 ArbitrageCache = {
