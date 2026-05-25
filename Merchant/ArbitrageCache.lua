@@ -1,23 +1,15 @@
 local ItemIDs = {
-    {158879, 0}, -- Bloodstained Message
-    {222575, 105}, -- Hasty Alchemist's Mixing Rod
-    {222575, 79}, -- Hasty Alchemist's Mixing Rod
-    {222575, 85}, -- Hasty Alchemist's Mixing Rod
-    {222575, 91}, -- Hasty Alchemist's Mixing Rod
+    {118333, 0}, -- Universal Language Compensator
+    {118427, 0}, -- Autographed Hearthstone Card
+    {127868, 0}, -- Crusher
     {223085, 0}, -- Design: Fractured Gemstone Locket
     {223101, 0}, -- Pattern: Reinforced Setae Flyers
-    {245775, 180}, -- Hobbyist Scribe's Quill
-    {245775, 186}, -- Hobbyist Scribe's Quill
-    {245775, 192}, -- Hobbyist Scribe's Quill
-    {245775, 199}, -- Hobbyist Scribe's Quill
-    {245775, 206}, -- Hobbyist Scribe's Quill
-    {258499, 0}, -- Technique: Restful Bronze Bench
+    {237947, 0}, -- Thalassian Leatherworker's Toolset
+    {256625, 0}, -- Pattern: Hexwoven Strand
     {267395, 0}, -- Technique: Homely Wall Shelves
-    {29363, 0}, -- Mana Wyrmling
-    {30308, 0}, -- Pattern: Hurricane Boots
     {30324, 0}, -- Plans: Red Havoc Boots
-    {86280, 0}, -- Pattern: Murderer's Gloves
-    {86380, 0}, -- Pattern: Imperial Silk Gloves
+    {47638, 0}, -- Pattern: Merlin's Robe
+    {47639, 0}, -- Pattern: Bejeweled Wizard's Bracers
 }
 
 ArbitrageCache = {
