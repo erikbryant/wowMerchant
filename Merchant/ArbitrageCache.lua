@@ -1,15 +1,19 @@
 local ItemIDs = {
-    {118333, 0}, -- Universal Language Compensator
-    {118427, 0}, -- Autographed Hearthstone Card
-    {127868, 0}, -- Crusher
+    {223060, 0}, -- Technique: Patient Alchemist's Mixing Rod
     {223085, 0}, -- Design: Fractured Gemstone Locket
-    {223101, 0}, -- Pattern: Reinforced Setae Flyers
-    {237947, 0}, -- Thalassian Leatherworker's Toolset
-    {256625, 0}, -- Pattern: Hexwoven Strand
+    {240953, 180}, -- Bold Biographer's Bifocals
+    {240953, 186}, -- Bold Biographer's Bifocals
+    {240953, 192}, -- Bold Biographer's Bifocals
+    {240953, 199}, -- Bold Biographer's Bifocals
+    {240953, 206}, -- Bold Biographer's Bifocals
+    {245775, 180}, -- Hobbyist Scribe's Quill
+    {245775, 186}, -- Hobbyist Scribe's Quill
+    {245775, 192}, -- Hobbyist Scribe's Quill
+    {245775, 199}, -- Hobbyist Scribe's Quill
+    {245775, 206}, -- Hobbyist Scribe's Quill
     {267395, 0}, -- Technique: Homely Wall Shelves
-    {30324, 0}, -- Plans: Red Havoc Boots
-    {47638, 0}, -- Pattern: Merlin's Robe
-    {47639, 0}, -- Pattern: Bejeweled Wizard's Bracers
+    {44822, 0}, -- Albino Snake
+    {86380, 0}, -- Pattern: Imperial Silk Gloves
 }
 
 ArbitrageCache = {
