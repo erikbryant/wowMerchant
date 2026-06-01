@@ -118,6 +118,9 @@ local function OnEvent(self, event, item)
 
         -- Results are sorted by price (lowest first) so we only need to check the first result
         local result = C_AuctionHouse.GetItemSearchResultInfo(item, 1)
+--         if result ~= nil then
+--             MerchUtil.PrettyPrint(item.itemID, item.itemLevel)
+--         end
         if result ~= nil and result.buyoutAmount ~= nil and result.buyoutAmount > 0 and result.buyoutAmount < PriceCache.VendorSellPrice(item.itemID) then
             C_AuctionHouse.SetFavoriteItem(item, true)
             table.insert(FavoritesCreated, item)
