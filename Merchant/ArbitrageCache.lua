@@ -1,5 +1,6 @@
 local ItemIDs = {
-    {198715, 0}, -- Runed Draconium Rod
+    {198715, 71}, -- Runed Draconium Rod
+    {198715, 74}, -- Runed Draconium Rod
     {223085, 0}, -- Design: Fractured Gemstone Locket
     {240953, 180}, -- Bold Biographer's Bifocals
     {240953, 186}, -- Bold Biographer's Bifocals
