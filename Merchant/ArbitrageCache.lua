@@ -1,10 +1,20 @@
 local ItemIDs = {
-    {191580, 0}, -- Recipe: Transmute: Awakened Earth
-    {194266, 0}, -- Pattern: Bronzed Grip Wrappings
-    {267395, 0}, -- Technique: Homely Wall Shelves
-    {30307, 0}, -- Pattern: Boots of the Crimson Hawk
-    {47657, 0}, -- Pattern: Royal Moonshroud Robe
-    {86283, 0}, -- Pattern: Raiment of Blood and Bone
+    {198715, 0}, -- Runed Draconium Rod
+    {223085, 0}, -- Design: Fractured Gemstone Locket
+    {240953, 180}, -- Bold Biographer's Bifocals
+    {240953, 186}, -- Bold Biographer's Bifocals
+    {240953, 192}, -- Bold Biographer's Bifocals
+    {240953, 199}, -- Bold Biographer's Bifocals
+    {240953, 206}, -- Bold Biographer's Bifocals
+    {240954, 180}, -- Fantastic Font Focuser
+    {240954, 186}, -- Fantastic Font Focuser
+    {240954, 192}, -- Fantastic Font Focuser
+    {240954, 199}, -- Fantastic Font Focuser
+    {240954, 206}, -- Fantastic Font Focuser
+    {24298, 0}, -- Pattern: Blackstrike Bracers
+    {256625, 0}, -- Pattern: Hexwoven Strand
+    {256716, 0}, -- Design: Prismatic Focusing Iris
+    {258134, 0}, -- Pattern: Voidstrider Saddlebag
 }
 
 ArbitrageCache = {
