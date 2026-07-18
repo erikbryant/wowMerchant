@@ -26,6 +26,8 @@ local function SlashHandler(msg, ...)
         AHArbitrage.Status()
         AHQuery.Status()
     elseif msg == "scan" then
+        MerchUtil.PrettyPrint("Validating price cache...")
+        PriceCache.ValidatePriceCache()
         AHArbitrage.Scan()
     elseif msg == "arbitrage" then
         AHQuery.Arbitrage()
