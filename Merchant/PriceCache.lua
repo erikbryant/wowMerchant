@@ -12411,28 +12411,6 @@ local VendorSellPriceCache = {
   ["280425"] = 50000,
 }
 
--- VendorSellPrice returns the cached vendor sell price
-local function VendorSellPrice(itemID)
-    return VendorSellPriceCache[tostring(itemID)] or 0
-end
-
--- ValidatePriceCache verifies each cached sell price matches the actual sell price
-local function ValidatePriceCache()
-    for itemID, cachedPrice in pairs(VendorSellPriceCache) do
-        itemID = tonumber(itemID)
-        local item = Item:CreateFromItemID(itemID)
-        item:ContinueOnItemLoad(
-                function()
-                    local itemInfo = { C_Item.GetItemInfo(itemID) }
-                    local sellPrice = itemInfo[11]
-                    if cachedPrice ~= sellPrice then
-                        MerchUtil.PrettyPrint("Cached price mismatch!", itemID, GetCoinTextureString(cachedPrice), "~=", GetCoinTextureString(sellPrice))
-                    end
-                end
-        )
-    end
-end
-
 local Cosmetics = {
   ["3889"] = true,
   ["3892"] = true,
@@ -12920,6 +12898,28 @@ local Cosmetics = {
   ["281570"] = true,
   ["281571"] = true,
 }
+
+-- VendorSellPrice returns the cached vendor sell price
+local function VendorSellPrice(itemID)
+    return VendorSellPriceCache[tostring(itemID)] or 0
+end
+
+-- ValidatePriceCache verifies each cached sell price matches the actual sell price
+local function ValidatePriceCache()
+    for itemID, cachedPrice in pairs(VendorSellPriceCache) do
+        itemID = tonumber(itemID)
+        local item = Item:CreateFromItemID(itemID)
+        item:ContinueOnItemLoad(
+                function()
+                    local itemInfo = { C_Item.GetItemInfo(itemID) }
+                    local sellPrice = itemInfo[11]
+                    if cachedPrice ~= sellPrice then
+                        MerchUtil.PrettyPrint("Cached price mismatch!", itemID, GetCoinTextureString(cachedPrice), "~=", GetCoinTextureString(sellPrice))
+                    end
+                end
+        )
+    end
+end
 
 -- Cosmetic returns true if the item is a Cosmetic
 local function Cosmetic(itemID)
