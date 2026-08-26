@@ -14,6 +14,13 @@ Slash commands usable in the chat window
 * /fstack - debugging visible UI elements
 * /tableinspect - interactive table inspection
 
+## PriceCache.lua
+
+This holds precomputed information about items of interest. Any items that would not make an arbitrage have been filtered away. If an item is in the list then it is a definite candidate.
+
+It also holds a list of cosmetic items. This is for the auto-selling function. Do not auto-sell cosmetics!
+
+
 ## Single Threaded
 
 The WoW UI is single threaded. We can create callbacks and have those
