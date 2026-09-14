@@ -32,6 +32,7 @@ local function SlashHandler(msg, ...)
     elseif msg == "arbitrage" then
         AHQuery.Arbitrage()
     elseif msg == "validate" then
+        MerchUtil.PrettyPrint("Validating price cache...")
         PriceCache.ValidatePriceCache()
     else
         if msg ~= "" then
