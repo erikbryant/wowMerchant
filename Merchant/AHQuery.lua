@@ -43,7 +43,7 @@ end
 local function Send(itemID)
     local itemKey = C_AuctionHouse.MakeItemKey(itemID[1])
     local sorts = {
-        {sortOrder=Enum.AuctionHouseSortOrder.Price, reverseSort=false},
+        {sortOrder=Enum.AuctionHouseSortOrder.Buyout, reverseSort=false},
     }
     if itemID[2] ~= 0 then
         -- We need a specific iLevel for this item
