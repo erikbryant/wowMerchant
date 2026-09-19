@@ -2,7 +2,6 @@ ADDON=Merchant
 WOW=/Applications/World\ of\ Warcraft/_retail_/Interface/AddOns
 CACHE=../wow/exports/
 CACHE_PRICE=PriceCache.lua
-ARBITRAGE_LATEST_LOG=arbitrageLatest
 CACHE_ARBITRAGE=ArbitrageCache.lua
 
 uninstall:
@@ -15,8 +14,8 @@ $(ADDON)/$(CACHE_PRICE): $(CACHE)/$(CACHE_PRICE)
 	cp $(CACHE)/$(CACHE_PRICE) $(ADDON)
 	git --no-pager diff $@
 
-$(ADDON)/$(CACHE_ARBITRAGE): $(CACHE)/$(ARBITRAGE_LATEST_LOG) makeArbitrageCache
-	./makeArbitrageCache "$(CACHE)/$(ARBITRAGE_LATEST_LOG)" > $(ADDON)/$(CACHE_ARBITRAGE)
+$(ADDON)/$(CACHE_ARBITRAGE): $(CACHE)/$(CACHE_ARBITRAGE)
+	cp $(CACHE)/$(CACHE_ARBITRAGE) $(ADDON)
 	git --no-pager diff $@
 
 cache: $(ADDON)/$(CACHE_PRICE) $(ADDON)/$(CACHE_ARBITRAGE) install
