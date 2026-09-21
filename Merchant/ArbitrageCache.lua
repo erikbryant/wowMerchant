@@ -1,7 +1,4 @@
 
-local ItemIDs_EU = {
-  
-}
 local ItemIDs_US = {
   
 }
