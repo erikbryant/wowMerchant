@@ -5,6 +5,7 @@
 ## Author: Erik Bryant (erikbryantology@gmail.com)
 ## SavedVariables:
 
+Audio.lua
 MerchGlobal.lua
 MerchUtil.lua
 SlashHandler.lua
