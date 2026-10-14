@@ -12,17 +12,17 @@ end
 
 -- Pause sound effects at the top of the hour
 local function PauseSFX()
-    if not IsResting() then
-        -- Only pause sound effects if we are in a city
-        return
+    local d = C_DateAndTime.GetCurrentCalendarTime()
+
+    -- Pause if we are in a city at the top of the hour
+    if (d.minute >= 58 or d.minute <= 1) and IsResting() then
+        MerchUtil.PrettyPrint("Pausing sound effects at:", d.minute)
+        C_CVar.SetCVar("Sound_EnableSFX", "0")
+    else
+        EnableSFX()
     end
 
-    local d = C_DateAndTime.GetCurrentCalendarTime()
-    if d.minute == 59 then
-        MerchUtil.PrettyPrint("Pausing sound effects")
-        C_CVar.SetCVar("Sound_EnableSFX", "0")
-        C_Timer.After(100, EnableSFX)
-    end
+    C_Timer.After(30, PauseSFX)
 end
 
 -- Dispatch an incoming event
@@ -37,4 +37,6 @@ AudioToggleFrame:Hide()
 AudioToggleFrame:SetScript("OnEvent", OnEvent)
 AudioToggleFrame:RegisterEvent("PLAYER_LOGOUT")
 
-C_Timer.NewTicker(50, PauseSFX)
+-- For the first moments after logging in, IsResting() returns false whether the
+-- character is resting or not. Put in a slight delay before starting the check.
+C_Timer.After(5, PauseSFX)
