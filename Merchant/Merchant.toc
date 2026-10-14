@@ -1,5 +1,5 @@
-## Interface: 120100
-## Version: 1.0.7
+## Interface: 120105
+## Version: 1.0.8
 ## Title: Merchant
 ## Notes: Convenience features for buying and selling items
 ## Author: Erik Bryant (erikbryantology@gmail.com)
