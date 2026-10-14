@@ -12501,6 +12501,7 @@ local VendorSellPriceCache = {
   [284578] = 218568,
   [286211] = 20850,
   [286212] = 218568,
+  [286213] = 218568,
 }
 
 local Cosmetics = {
