@@ -5,9 +5,10 @@
 ## Author: Erik Bryant (erikbryantology@gmail.com)
 ## SavedVariables:
 
-Audio.lua
 MerchGlobal.lua
 MerchUtil.lua
+
+Audio.lua
 SlashHandler.lua
 AutoMail.lua
 AutoMount.lua
